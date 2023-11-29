@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="swipeKananTwoVM" type="com.andhikaihsansapplication.app.modules.swipekanantwo.data.viewmodel.SwipeKananTwoVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+
+        <ScrollView
+            android:id="@+id/scrollViewScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="start">
+
+            <LinearLayout
+                android:id="@+id/linearSwipekananTw"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_51pxv"
+                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/btnArrowleft"
+                    android:layout_width="@dimen/_50pxh"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:background="@drawable/rectangle_bg_bluegray_300_radius_10"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" />
+<!--                <TextView android:ellipsize="end"-->
+<!--                    android:id="@+id/txtFindHospital"-->
+<!--                    style="@style/txtJostromanbold24"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="@dimen/_5pxv"-->
+<!--                    android:layout_marginStart="@dimen/_10pxh"-->
+<!--                    android:layout_marginTop="@dimen/_9pxv"-->
+<!--                    android:layout_weight="0.73"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@{swipeKananTwoVM.swipeKananTwoModel.txtFindHospital}"-->
+<!--                    tools:text="Find Hospital"/>-->
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtNearestHospita"
+                    style="@style/txtJostromanbold32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:text="@{swipeKananTwoVM.swipeKananTwoModel.txtNearestHospita}"
+                    tools:text="@string/msg_nearest_hospita" />
+
+                <View
+                    android:id="@+id/viewRs1"
+                    android:layout_width="@dimen/_315pxh"
+                    android:layout_height="@dimen/_149pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+
+                <View
+                    android:id="@+id/viewRs2"
+                    android:layout_width="@dimen/_315pxh"
+                    android:layout_height="@dimen/_149pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+
+                <View
+                    android:id="@+id/viewRs3"
+                    android:layout_width="@dimen/_315pxh"
+                    android:layout_height="@dimen/_149pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+
+                <View
+                    android:id="@+id/viewRs4"
+                    android:layout_width="@dimen/_315pxh"
+                    android:layout_height="@dimen/_149pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+
+                <View
+                    android:id="@+id/viewRs5"
+                    android:layout_width="@dimen/_315pxh"
+                    android:layout_height="@dimen/_149pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

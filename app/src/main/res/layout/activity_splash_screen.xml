@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashScreenVM" type="com.andhikaihsansapplication.app.modules.splashscreen.data.viewmodel.SplashScreenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSplashScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+        <ImageView android:id="@+id/imageLogoMediFinder"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_258pxh"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_34pxh"
+            android:layout_marginTop="@dimen/_159pxv"
+            android:layout_width="@dimen/_291pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_logomedifinder}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_logomedifinder"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtEmergency"
+            android:layout_gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_121pxh"
+            android:layout_marginStart="@dimen/_121pxh"
+            android:layout_marginTop="@dimen/_158pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{splashScreenVM.splashScreenModel.txtEmergency}"
+            style="@style/txtJostromanmedium18" tools:text="@string/lbl_emergency"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnNext" android:layout_gravity="end"
+            android:layout_height="@dimen/_32pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_44pxh"
+            android:layout_marginStart="@dimen/_44pxh"
+            android:layout_marginTop="@dimen/_50pxv"
+            android:layout_width="@dimen/_104pxh"
+            android:paddingBottom="@dimen/_4pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_4pxv" android:singleLine="true"
+            android:text="@string/lbl_next" android:textAllCaps="false"
+            style="@style/btnSolidRounded" tools:text="@string/lbl_next"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="swipeKananVM" type="com.andhikaihsansapplication.app.modules.swipekanan.data.viewmodel.SwipeKananVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSwipekanan"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+        <ImageView android:id="@+id/imageLogoMediFinder"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_219pxh"
+            android:layout_marginEnd="@dimen/_23pxh"
+            android:layout_marginStart="@dimen/_23pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="@dimen/_248pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_logomedifinder}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_logomedifinder"/>
+        <LinearLayout android:id="@+id/linearUsername"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_23pxh"
+            android:layout_marginTop="@dimen/_67pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFullName"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{swipeKananVM.swipeKananModel.txtFullName}"
+                style="@style/txtJostromanmedium14" tools:text="@string/lbl_full_name"/>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnlineone"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylered_700cornerRadius">
+                <View android:background="@color/deep_orange_50"
+                    android:id="@+id/lineLineOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_9pxv"
+                    android:layout_marginEnd="@dimen/_9pxh"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_30pxv" android:layout_width="@dimen/_294pxh"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearPass"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_23pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPhoneNumber"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{swipeKananVM.swipeKananModel.txtPhoneNumber}"
+                style="@style/txtJostromanmedium14" tools:text="@string/lbl_phone_number"/>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnlinetwo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylered_700cornerRadius">
+                <View android:background="@color/deep_orange_50"
+                    android:id="@+id/lineLineTwo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_9pxv"
+                    android:layout_marginEnd="@dimen/_9pxh"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_30pxv" android:layout_width="@dimen/_294pxh"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearPass1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_23pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddress"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{swipeKananVM.swipeKananModel.txtAddress}"
+                style="@style/txtJostromanmedium14" tools:text="@string/lbl_address"/>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnlinetwoOne"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylered_700cornerRadius">
+                <View android:background="@color/deep_orange_50"
+                    android:id="@+id/lineLineTwoOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_9pxv"
+                    android:layout_marginEnd="@dimen/_9pxh"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_30pxv" android:layout_width="@dimen/_294pxh"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnNext" android:layout_gravity="end"
+            android:layout_height="@dimen/_32pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_44pxh"
+            android:layout_marginStart="@dimen/_44pxh"
+            android:layout_marginTop="@dimen/_118pxv"
+            android:layout_width="@dimen/_104pxh"
+            android:paddingBottom="@dimen/_4pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_4pxv" android:singleLine="true"
+            android:text="@string/lbl_next" android:textAllCaps="false"
+            style="@style/btnSolidRounded" tools:text="@string/lbl_next"/>
+    </LinearLayout>
+</layout>

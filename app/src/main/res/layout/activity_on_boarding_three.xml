@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onBoardingThreeVM" type="com.andhikaihsansapplication.app.modules.onboardingthree.data.viewmodel.OnBoardingThreeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOnBoardingThr"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+
+        <ImageView
+            android:id="@+id/imageImageremovebg"
+            imageRes="@{@drawable/img_imageremovebg}"
+            android:layout_width="@dimen/_235pxh"
+            android:layout_height="@dimen/_234pxh"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_77pxv"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_imageremovebg" />
+
+        <TextView
+            android:id="@+id/txtYoucanfindco"
+            style="@style/txtJostromanregular18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40pxh"
+            android:layout_marginTop="@dimen/_93pxv"
+            android:layout_marginEnd="@dimen/_40pxh"
+            android:gravity="start|center_horizontal"
+            android:text="@{onBoardingThreeVM.onBoardingThreeModel.txtYoucanfindco}"
+            tools:text="@string/msg_you_can_find_co" />
+
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCreateacc"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_86pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreateNewAccount"
+                style="@style/btnSolidRounded_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/msg_create_new_acco"
+                android:textAllCaps="false"
+                tools:text="@string/msg_create_new_acco" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearLogin"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnLogIn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_log_in"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1" tools:text="@string/lbl_log_in"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

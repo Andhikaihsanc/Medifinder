@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="updatedVM" type="com.andhikaihsansapplication.app.modules.updated.data.viewmodel.UpdatedVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearUpdated"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_43pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <FrameLayout android:id="@+id/frameStackyourpasswordh"
+                android:layout_height="@dimen/_125pxv" android:layout_width="match_parent">
+                <TextView android:ellipsize="end"
+                    android:gravity="top|start"
+                    android:id="@+id/txtYourpasswordh"
+                    android:layout_gravity="bottom|start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{updatedVM.updatedModel.txtYourpasswordh}"
+                    style="@style/txtJostromansemibold14" tools:text="@string/msg_your_password_h"/>
+                <TextView android:id="@+id/txtPasswordUpdate"
+                    android:layout_gravity="top|start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_2pxh"
+                    android:layout_width="wrap_content"
+                    android:text="@{updatedVM.updatedModel.txtPasswordUpdate}"
+                    style="@style/txtJostromanbold36" tools:text="@string/msg_password_update"/>
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ImageView android:id="@+id/imageVector"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_162pxh"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_58pxv"
+            android:layout_width="@dimen/_162pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector_black_900"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_vector_black_900"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearLogin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_76pxv"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtSendlink"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_2pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@{updatedVM.updatedModel.txtSendlink}"
+                style="@style/txtSolidRounded_2" tools:text="@string/lbl_login2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

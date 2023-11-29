@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="deleteAccConfirmationVM" type="com.andhikaihsansapplication.app.modules.deleteaccconfirmation.data.viewmodel.DeleteAccConfirmationVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameDeleteAccConf"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylegray_800_7f">
+        <View
+            android:background="@drawable/rectangle_bg_red_700_radius_10"
+            android:id="@+id/viewRectangleSeven"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_132pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_marginTop="@dimen/_40pxv" android:layout_width="@dimen/_290pxh"/>
+        <LinearLayout android:id="@+id/linearColumnconfirmation"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_40pxh"
+            android:layout_marginVertical="@dimen/_40pxv"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_width="match_parent"
+                android:text="@{deleteAccConfirmationVM.deleteAccConfirmationModel.txtConfirmation}"
+                style="@style/txtJostromansemibold16_1" tools:text="@string/msg_are_you_sure_yo2"/>
+            <LinearLayout android:id="@+id/linearRowyesImSure"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnYesImSure"
+                    android:layout_height="@dimen/_32pxv"
+                    android:layout_width="@dimen/_104pxh"
+                    android:paddingBottom="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_11pxh"
+                    android:paddingStart="@dimen/_12pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_yes_i_m_sure"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_4" tools:text="@string/lbl_yes_i_m_sure"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnNo"
+                    android:layout_height="@dimen/_32pxv"
+                    android:layout_marginStart="@dimen/_27pxh"
+                    android:layout_width="@dimen/_104pxh"
+                    android:paddingBottom="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_no"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_4" tools:text="@string/lbl_no"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

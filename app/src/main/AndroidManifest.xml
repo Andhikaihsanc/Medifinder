@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.andhikaihsansapplication.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.andhikaihsansapplication.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.gigi.ui.GigiActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.mainpage.ui.MainPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.spesialisjantung.ui.SpesialisJantungActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.credentials.ui.CredentialsActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.andhikaihsansapplication.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.logoutconfirmation.ui.LogoutConfirmationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.swipekanantwo.ui.SwipeKananTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.updated.ui.UpdatedActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.aboutapp.ui.AboutAppActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.onboardingone.ui.OnBoardingOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.deleteaccconfirmation.ui.DeleteAccConfirmationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.manageaccount.ui.ManageAccountActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.register.ui.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.swipekananthree.ui.SwipeKananThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.changename.ui.ChangeNameActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.listtodetail.ui.ListToDetailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.rate.ui.RateActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.changeaddress.ui.ChangeAddressActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.swipekanan.ui.SwipeKananActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.onboardingtwo.ui.OnBoardingTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.forgotpassword.ui.ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.helpinformation.ui.HelpInformationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.onboardingthree.ui.OnBoardingThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.andhikaihsansapplication.app.modules.changephonenumber.ui.ChangePhoneNumberActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

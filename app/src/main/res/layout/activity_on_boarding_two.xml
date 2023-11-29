@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onBoardingTwoVM" type="com.andhikaihsansapplication.app.modules.onboardingtwo.data.viewmodel.OnBoardingTwoVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearOnBoardingTwo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+        <ImageView android:id="@+id/imageManlookingat"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_227pxh"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_64pxv"
+            android:layout_width="@dimen/_318pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_manlookingat}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_manlookingat"/>
+
+        <TextView
+            android:id="@+id/txtYoucanfindth"
+            style="@style/txtJostromanregular18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_41pxh"
+            android:layout_marginTop="@dimen/_88pxv"
+            android:layout_marginEnd="@dimen/_41pxh"
+            android:gravity="start|center_horizontal|end"
+            android:text="@{onBoardingTwoVM.onBoardingTwoModel.txtYoucanfindth}"
+            tools:text="@string/msg_you_can_find_th" />
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearLogin"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_112pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnContinue"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_continue"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1" tools:text="@string/lbl_continue"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowskip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_36pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_69pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtSkip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{onBoardingTwoVM.onBoardingTwoModel.txtSkip}"
+                style="@style/txtJostromansemibold16" tools:text="@string/lbl_skip"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorUser"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8pxv"
+                android:layout_marginStart="@dimen/_104pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_weight="0.49" android:layout_width="0dp"
+                app:drawable_normal="@drawable/indicator_unselected_bg_gray_600_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_bluegray_500_radius_8"
+                app:indicator_size="@dimen/_10pxh" app:indicator_spacing="@dimen/_8pxh"/>
+            <ImageView android:id="@+id/imageArrowright"
+                android:layout_height="@dimen/_13pxh"
+                android:layout_marginBottom="@dimen/_6pxv"
+                android:layout_marginStart="@dimen/_109pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="@dimen/_14pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

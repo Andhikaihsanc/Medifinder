@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onBoardingOneVM" type="com.andhikaihsansapplication.app.modules.onboardingone.data.viewmodel.OnBoardingOneVM"/>
+    </data>
+    <LinearLayout android:gravity="end"
+        android:id="@+id/linearOnBoardingOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtWelcomeToMedi"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32pxh"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_92pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{onBoardingOneVM.onBoardingOneModel.txtWelcomeToMedi}"
+            style="@style/txtJostromanbold24" tools:text="@string/msg_welcome_to_medi"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerListsearch"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_66pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_19pxh}" tools:itemCount="3" tools:listitem="@layout/row_listsearch"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearLogin"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_104pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnGetStarted"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_get_started"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_1" tools:text="@string/lbl_get_started"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowskip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_36pxv"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_69pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtSkip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{onBoardingOneVM.onBoardingOneModel.txtSkip}"
+                style="@style/txtJostromansemibold16" tools:text="@string/lbl_skip"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorUser"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8pxv"
+                android:layout_marginStart="@dimen/_104pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_weight="0.49" android:layout_width="0dp"
+                app:drawable_normal="@drawable/indicator_unselected_bg_gray_600_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_bluegray_500_radius_8"
+                app:indicator_size="@dimen/_10pxh" app:indicator_spacing="@dimen/_8pxh"/>
+            <ImageView android:id="@+id/imageArrowright"
+                android:layout_height="@dimen/_13pxh"
+                android:layout_marginBottom="@dimen/_6pxv"
+                android:layout_marginStart="@dimen/_109pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="@dimen/_14pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="aboutAppVM" type="com.andhikaihsansapplication.app.modules.aboutapp.data.viewmodel.AboutAppVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameAboutApp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyledeep_orange_50">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="top|start"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_19pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_bluegray_300_radius_10"
+                        android:id="@+id/btnArrowleft"
+                        android:layout_height="@dimen/_50pxh"
+                        android:layout_width="@dimen/_50pxh"
+                        android:paddingHorizontal="@dimen/_13pxh"
+                        android:paddingVertical="@dimen/_13pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAboutApp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:layout_marginStart="@dimen/_14pxh"
+                        android:layout_marginTop="@dimen/_9pxv"
+                        android:layout_weight="0.71"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{aboutAppVM.aboutAppModel.txtAboutApp}"
+                        style="@style/txtJostromanbold24" tools:text="@string/lbl_about_app"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:gravity="end"
+                android:id="@+id/txtYoucanfindco"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_335pxv"
+                android:layout_width="match_parent"
+                android:text="@{aboutAppVM.aboutAppModel.txtYoucanfindco}"
+                style="@style/txtJostromanregular18" tools:text="@string/msg_you_can_find_co"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsearchRowModel" type="com.andhikaihsansapplication.app.modules.onboardingone.data.model.ListsearchRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFind"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageSearch"
+            android:layout_height="@dimen/_48pxh"
+            android:layout_marginBottom="@dimen/_30pxv"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="@dimen/_48pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_search"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnfindnearestho"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_weight="0.84" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFindNearestHo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listsearchRowModel.txtFindNearestHo}"
+                style="@style/txtJostromanbold24" tools:text="@string/msg_find_nearest_ho"/>
+            <TextView android:id="@+id/txtFindtheneares"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{listsearchRowModel.txtFindtheneares}"
+                style="@style/txtJostromanregular18" tools:text="@string/msg_find_the_neares"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="spesialisJantungVM" type="com.andhikaihsansapplication.app.modules.spesialisjantung.data.viewmodel.SpesialisJantungVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="start"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearSpesialisJantu"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/_67pxv"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_19pxv">
+            <LinearLayout
+                android:id="@+id/linearSwipekananTw"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_51pxv"
+                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_bluegray_300_radius_10"
+                    android:id="@+id/btnArrowleft"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+                <androidx.appcompat.widget.SearchView
+                    android:background="@drawable/rectangle_border_black_900_radius_24_5"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/searchViewButtonCustomT"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_25pxv"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewButtonCustomT"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="Find Hospital" app:searchIcon="@drawable/img_search"/>
+            </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerListbrawijayaunive"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_93pxv"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="6" tools:listitem="@layout/row_listbrawijayaunive"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

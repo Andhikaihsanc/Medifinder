@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="registerVM" type="com.andhikaihsansapplication.app.modules.register.data.viewmodel.RegisterVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnmedifinderhigh"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_50">
+
+        <ScrollView
+            android:id="@+id/scrollViewScrollview"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/_27pxv"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_23pxh"
+            android:layout_marginTop="@dimen/_34pxv"
+            android:layout_height="match_parent"
+            android:gravity="start">
+
+            <LinearLayout
+                android:id="@+id/linearRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageMedifinderhigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48pxh"
+                    android:layout_marginStart="@dimen/_2pxh"
+                    android:layout_marginEnd="@dimen/_3pxh"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_medifinderhigh"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_medifinderhigh" />
+
+                <TextView
+                    android:id="@+id/txtREGISTER"
+                    style="@style/txtJostromanbold24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_83pxh"
+                    android:layout_marginTop="@dimen/_40pxv"
+                    android:layout_marginEnd="@dimen/_83pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{registerVM.registerModel.txtREGISTER}"
+                    tools:text="@string/lbl_register" />
+
+                <LinearLayout
+                    android:id="@+id/linearUsername"
+                    style="@style/groupStylecornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtUsername"
+                        style="@style/txtJostromanmedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{registerVM.registerModel.txtUsername}"
+                        tools:text="@string/lbl_username" />
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnlineone"
+                        style="@style/groupStylered_700cornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/lineLineOne"
+                            android:layout_width="@dimen/_294pxh"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_12pxh"
+                            android:layout_marginTop="@dimen/_30pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_9pxv"
+                            android:background="@color/deep_orange_50" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearEmail"
+                    style="@style/groupStylecornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtEmail"
+                        style="@style/txtJostromanmedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{registerVM.registerModel.txtEmail}"
+                        tools:text="@string/lbl_e_mail" />
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnlinetwo"
+                        style="@style/groupStylered_700cornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/lineLineTwo"
+                            android:layout_width="@dimen/_294pxh"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_12pxh"
+                            android:layout_marginTop="@dimen/_30pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_9pxv"
+                            android:background="@color/deep_orange_50" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearNamalengkap"
+                    style="@style/groupStylecornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtFullName"
+                        style="@style/txtJostromanmedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{registerVM.registerModel.txtFullName}"
+                        tools:text="@string/lbl_full_name" />
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnlinethree"
+                        style="@style/groupStylered_700cornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/lineLineThree"
+                            android:layout_width="@dimen/_294pxh"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_12pxh"
+                            android:layout_marginTop="@dimen/_30pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_9pxv"
+                            android:background="@color/deep_orange_50" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearNohp"
+                    style="@style/groupStylecornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtPhoneNumber"
+                        style="@style/txtJostromanmedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{registerVM.registerModel.txtPhoneNumber}"
+                        tools:text="@string/lbl_phone_number" />
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnlinefour"
+                        style="@style/groupStylered_700cornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/lineLineFour"
+                            android:layout_width="@dimen/_294pxh"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_12pxh"
+                            android:layout_marginTop="@dimen/_29pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:background="@color/deep_orange_50" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearPass"
+                    style="@style/groupStylecornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtPassword"
+                        style="@style/txtJostromanmedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{registerVM.registerModel.txtPassword}"
+                        tools:text="@string/lbl_password" />
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnlinefive"
+                        style="@style/groupStylered_700cornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/lineLineFive"
+                            android:layout_width="@dimen/_294pxh"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_12pxh"
+                            android:layout_marginTop="@dimen/_29pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:background="@color/deep_orange_50" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearKonfirmasipass"
+                    style="@style/groupStylecornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtConfirmPasswor"
+                        style="@style/txtJostromanmedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{registerVM.registerModel.txtConfirmPasswor}"
+                        tools:text="@string/msg_confirm_passwor" />
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnlinesix"
+                        style="@style/groupStylered_700cornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/lineLineSix"
+                            android:layout_width="@dimen/_294pxh"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_12pxh"
+                            android:layout_marginTop="@dimen/_29pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:background="@color/deep_orange_50" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtRegisterOne"
+                    style="@style/txtSolidRounded_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_83pxh"
+                    android:layout_marginTop="@dimen/_57pxv"
+                    android:layout_marginEnd="@dimen/_83pxh"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_2pxv"
+                    android:singleLine="true"
+                    android:text="@{registerVM.registerModel.txtRegisterOne}"
+                    tools:text="@string/lbl_register2" />
+
+                <TextView
+                    android:id="@+id/txtConfirmation"
+                    style="@style/txtJostromanmedium14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_83pxh"
+                    android:layout_marginTop="@dimen/_30pxv"
+                    android:layout_marginEnd="@dimen/_72pxh"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@{registerVM.registerModel.txtConfirmation}"
+                    tools:text="@string/msg_already_have_an" />
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    style="@style/txtSolidRounded_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_83pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_marginEnd="@dimen/_83pxh"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_2pxv"
+                    android:singleLine="true"
+                    android:text="@{registerVM.registerModel.txtLogin}"
+                    tools:text="@string/lbl_login2" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
