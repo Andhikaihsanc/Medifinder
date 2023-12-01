@@ -46,8 +46,19 @@
                         style="@style/txtJostromanbold24" tools:text="@string/lbl_help_centre"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
-
-            <TextView android:gravity="center|center_horizontal"
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_border_black_900_radius_24_5"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewButtonCustomT"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewButtonCustomT"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search"/>
+            <TextView android:gravity="center"
                 android:id="@+id/txtYoucanfindco"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_17pxh"
