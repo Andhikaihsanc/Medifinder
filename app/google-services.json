@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1079737012667",
+    "project_id": "andhika-ihsan-s-applicat-741a6",
+    "storage_bucket": "andhika-ihsan-s-applicat-741a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079737012667:android:8c2203df37c4f7b05df49e",
+        "android_client_info": {
+          "package_name": "com.andhikaihsansapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARMVHZoYGtzuCq20_yBPVliPS6Lbvw1No"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
