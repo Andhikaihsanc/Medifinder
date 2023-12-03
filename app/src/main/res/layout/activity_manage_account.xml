@@ -67,8 +67,8 @@
                             android:layout_marginBottom="@dimen/_4pxv"
                             android:layout_width="@dimen/_24pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_vector_deep_orange_50"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_vector_deep_orange_50"/>
+                            android:src="@drawable/img_logout"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_logout"/>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtLogOut"
                             android:layout_height="wrap_content"
@@ -88,8 +88,8 @@
                         android:layout_marginTop="@dimen/_14pxv"
                         android:layout_width="@dimen/_12pxh"
                         android:scaleType="fitXY"
-                        android:src="@drawable/img_arrowright_black_900_22x12"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_900_22x12"/>
+                        android:src="@drawable/img_arrowright_black_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_900"/>
                 </LinearLayout>
                 <LinearLayout android:id="@+id/linearDeleteacc"
                     android:layout_height="wrap_content"
@@ -131,8 +131,8 @@
                         android:layout_marginTop="@dimen/_14pxv"
                         android:layout_width="@dimen/_12pxh"
                         android:scaleType="fitXY"
-                        android:src="@drawable/img_arrowright_black_900_22x12"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_900_22x12"/>
+                        android:src="@drawable/img_arrowright_black_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_900"/>
                 </LinearLayout>
                 <FrameLayout android:id="@+id/frameNavbar"
                     android:layout_height="@dimen/_95pxv"

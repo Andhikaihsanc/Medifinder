@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivityLoginBinding
+import com.andhikaihsansapplication.app.modules.forgotpassword.ui.ForgotPasswordActivity
 import com.andhikaihsansapplication.app.modules.login.`data`.viewmodel.LoginVM
 import com.andhikaihsansapplication.app.modules.mainpage.ui.MainPageActivity
 import com.andhikaihsansapplication.app.modules.register.ui.RegisterActivity
@@ -28,6 +29,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     }
     binding.txtLoginOne.setOnClickListener {
       val destIntent = MainPageActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.txtForgottenYour.setOnClickListener{
+      val destIntent = ForgotPasswordActivity.getIntent(this, null)
       startActivity(destIntent)
     }
   }

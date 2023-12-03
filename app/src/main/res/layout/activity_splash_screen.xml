@@ -17,16 +17,31 @@
             android:scaleType="fitXY"
             imageRes="@{@drawable/img_logomedifinder}"
             tools:ignore="ContentDescription" tools:src="@drawable/img_logomedifinder"/>
-        <TextView android:ellipsize="end" android:id="@+id/txtEmergency"
-            android:layout_gravity="end"
+        <ImageButton
+            android:background="@drawable/rectangle_bg_red_900_radius_10"
+            android:id="@+id/btnEmergencyalert"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginTop="@dimen/_120pxv"
+            android:layout_width="@dimen/_60pxh"
+            android:paddingHorizontal="@dimen/_6pxh"
+            android:paddingVertical="@dimen/_6pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_emergencyalert" tools:ignore="ContentDescription"/>
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/txtEmergency"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:layout_marginEnd="@dimen/_121pxh"
             android:layout_marginStart="@dimen/_121pxh"
-            android:layout_marginTop="@dimen/_158pxv"
-            android:layout_width="wrap_content"
             android:singleLine="true"
             android:text="@{splashScreenVM.splashScreenModel.txtEmergency}"
             style="@style/txtJostromanmedium18" tools:text="@string/lbl_emergency"/>
+
+
         <androidx.appcompat.widget.AppCompatButton
             android:ellipsize="end" android:gravity="center"
             android:id="@+id/btnNext" android:layout_gravity="end"

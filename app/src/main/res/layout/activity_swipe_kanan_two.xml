@@ -21,43 +21,49 @@
             <LinearLayout
                 android:id="@+id/linearSwipekananTw"
                 android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/_51pxv"
-                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_17pxh"
                 android:layout_marginTop="@dimen/_19pxv"
-                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_marginBottom="@dimen/_51pxv"
                 android:gravity="start"
                 android:orientation="vertical">
-            <LinearLayout android:gravity="start"
-                android:id="@+id/linearRowarrowleft"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:orientation="horizontal">
-                <ImageButton
-                    android:id="@+id/btnArrowleft"
-                    android:layout_width="@dimen/_50pxh"
-                    android:layout_height="@dimen/_50pxh"
-                    android:layout_marginEnd="@dimen/_10pxh"
-                    android:background="@drawable/rectangle_bg_bluegray_300_radius_10"
-                    android:paddingHorizontal="@dimen/_13pxh"
-                    android:paddingVertical="@dimen/_13pxv"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/img_arrowleft"
-                    tools:ignore="ContentDescription" />
-<!--                <TextView android:ellipsize="end"-->
-<!--                    android:id="@+id/txtFindHospital"-->
-<!--                    style="@style/txtJostromanbold24"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginBottom="@dimen/_5pxv"-->
-<!--                    android:layout_marginStart="@dimen/_10pxh"-->
-<!--                    android:layout_marginTop="@dimen/_9pxv"-->
-<!--                    android:layout_weight="0.73"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:text="@{swipeKananTwoVM.swipeKananTwoModel.txtFindHospital}"-->
-<!--                    tools:text="Find Hospital"/>-->
 
-            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnArrowleft"
+                        android:layout_width="@dimen/_50pxh"
+                        android:layout_height="@dimen/_50pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:background="@drawable/rectangle_bg_bluegray_300_radius_10"
+                        android:paddingHorizontal="@dimen/_13pxh"
+                        android:paddingVertical="@dimen/_13pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/txtFindHospita"
+                        style="@style/txtJostromanbold24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_9pxv"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:layout_weight="0.73"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{swipeKananTwoVM.swipeKananTwoModel.txtFindHospital}"
+                        tools:ignore="TextSizeCheck"
+                        tools:text="@string/lbl_find_hospital" />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/txtNearestHospita"

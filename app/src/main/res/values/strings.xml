@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">andhika_ihsan_s_application</string>
+    <string name="app_name">Medifinder</string>
     <string name="loading">Loading?</string>
     <string name="no_internet_connection">No internet connection!</string>
     <string name="lbl_continue">Continue</string>
-    <string name="msg_forgotten_your">Forgotten Your Password?</string>
+    <string name="msg_forgotten_your"><u>Forgotten Your Password?</u></string>
     <string name="lbl_help_centre">Help Centre</string>
     <string name="msg_jaksa_agung_sup">Jaksa Agung Suprapto St. Number 2, Klojen, Klojen, Malang CIty, East Java 65112</string>
     <string name="lbl_next">Next</string>
@@ -60,25 +60,31 @@ delete your account?</string>
     <string name="msg_your_password_h">Your password has been updated!</string>
     <string name="lbl_change_address">Change Address</string>
     <string name="lbl_manage_accounts">Manage Accounts</string>
+    <string name="lbl_find_hospital">Find Hospital</string>
     <string name="msg_please_enter_yo">Please enter your e-mail address, so we will send you a reset link.</string>
     <string name="lbl_no_thanks">No, Thanks!</string>
     <string name="msg_your_opinion_ma">Your opinion matters
 to us!</string>
     <string name="msg_welcome_to_medi">Welcome To MediFinder!</string>
-    <string name="msg_new_credential">New 
-Credentials</string>
+    <string name="msg_new_credential">New
+
+        Credentials</string>
     <string name="msg_password_update">Password
 Updated!</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_settings">Settings</string>
     <string name="msg_find_any_hospit">Find any hospital that suits your needs</string>
     <string name="lbl_update">Update</string>
-    <string name="msg_you_can_find_th">You can find the nearest hospital from your location during an emergency by swiping to the right of the application.</string>
+    <string name="msg_you_can_find_th">You can find complete information that related to hospital that you need.</string>
     <string name="lbl_rate_medifinder">Rate MediFinder</string>
     <string name="lbl_delete_account">Delete Account</string>
     <string name="lbl_manage_account">Manage Account</string>
     <string name="lbl_address">Address</string>
     <string name="lbl_yes_i_m_sure">Yes, I\u2019m sure</string>
+    <string name="lbl_detail_informat">Detail Information</string>
+    <string name="msg_description">"This application arises from a very crucial need in our daily lives. Sometimes, we or our loved ones may suddenly require emergency medical care. However, it is often difficult to find the nearest hospital, health center, or clinic, especially if we are not familiar with the area. That's why this application exists help us quickly and easily find medical assistance.
+In today's society, healthcare services are extremely important, and hospitals serve as vital centers that provide medical services and improve public health. Nevertheless, with the increasing complexity of healthcare services and the push for efficiency, improving accessibility to hospital-related information becomes crucial.
+Hospital information service applications are now the primary solution in this digital era. Although hospitals already have websites, mobile applications allow for greater accessibility. Currently, society relies on their mobile devices to access information quickly and easily, and developing such applications is a wise step that responds to technological trends and societal needs."</string>
     <string name="msg_you_can_find_co">You can find complete information that related to hospital that you need.</string>
     <string name="lbl_0341_403000">(0341) 403000</string>
     <string name="lbl_full_name">Full Name</string>

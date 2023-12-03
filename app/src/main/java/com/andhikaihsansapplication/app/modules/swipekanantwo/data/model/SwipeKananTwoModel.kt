@@ -9,4 +9,10 @@ data class SwipeKananTwoModel(
    * TODO Replace with dynamic value
    */
   var txtNearestHospita: String? =
-      MyApp.getInstance().resources.getString(R.string.msg_nearest_hospita))
+      MyApp.getInstance().resources.getString(R.string.msg_nearest_hospita),
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtFindHospital: String? =
+      MyApp.getInstance().resources.getString(R.string.lbl_find_hospital)
+)

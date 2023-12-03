@@ -11,6 +11,7 @@ import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivitySplashScreenBinding
 import com.andhikaihsansapplication.app.modules.onboardingone.ui.OnBoardingOneActivity
 import com.andhikaihsansapplication.app.modules.splashscreen.`data`.viewmodel.SplashScreenVM
+import com.andhikaihsansapplication.app.modules.swipekanan.ui.SwipeKananActivity
 import kotlin.String
 import kotlin.Unit
 
@@ -29,7 +30,19 @@ class SplashScreenActivity :
         startActivity(destIntent)
         this.overridePendingTransition(R.anim.right_to_left ,0 )
       }
+
+      binding.btnEmergencyalert.setOnClickListener{
+        val destIntent = SwipeKananActivity.getIntent(this,null)
+        startActivity(destIntent)
+      }
+
+      binding.txtEmergency.setOnClickListener{
+        val destIntent = SwipeKananActivity.getIntent(this,null)
+        startActivity(destIntent)
+      }
     }
+
+
 
     companion object {
       const val TAG: String = "SPLASH_SCREEN_ACTIVITY"

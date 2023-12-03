@@ -13,7 +13,7 @@ data class AboutAppModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtYoucanfindco: String? =
-      MyApp.getInstance().resources.getString(R.string.msg_you_can_find_co)
+  var txtDescription: String? =
+      MyApp.getInstance().resources.getString(R.string.msg_description)
 
 )

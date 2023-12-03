@@ -46,14 +46,34 @@
                         style="@style/txtJostromanbold24" tools:text="@string/lbl_about_app"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
-            <TextView android:gravity="end"
-                android:id="@+id/txtYoucanfindco"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10pxh"
-                android:layout_marginTop="@dimen/_335pxv"
-                android:layout_width="match_parent"
-                android:text="@{aboutAppVM.aboutAppModel.txtYoucanfindco}"
-                style="@style/txtJostromanregular18" tools:text="@string/msg_you_can_find_co"/>
+            <ScrollView android:clipToPadding="false"
+                android:fillViewport="true"
+                android:gravity="center_horizontal"
+                android:id="@+id/scrollViewScrollview"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_28pxv"
+                android:layout_weight="1" android:layout_width="match_parent">
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:id="@+id/linearColumndescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylered_700_87cornerRadius">
+                    <TextView
+                        android:gravity="start"
+                        android:id="@+id/txtDescription"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_20pxv"
+                        android:layout_marginEnd="@dimen/_21pxh"
+                        android:layout_marginStart="@dimen/_22pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{aboutAppVM.aboutAppModel.txtDescription}"
+                        style="@style/txtJostromanregular18" tools:text="@string/msg_description"/>
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
     </FrameLayout>
 </layout>

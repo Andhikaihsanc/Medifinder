@@ -131,8 +131,8 @@
                             android:layout_marginTop="@dimen/_1pxv"
                             android:layout_width="@dimen/_24pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_location"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+                            android:src="@drawable/linkmanageaccount"
+                            tools:ignore="ContentDescription" tools:src="@drawable/linkmanageaccount"/>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtManageAccount"
                             android:layout_height="wrap_content"
@@ -173,8 +173,8 @@
                             android:layout_marginBottom="@dimen/_1pxv"
                             android:layout_width="@dimen/_26pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_question"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_question"/>
+                            android:src="@drawable/img_helpcenter"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_helpcenter"/>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtHelpCenter"
                             android:layout_height="wrap_content"
@@ -270,21 +270,17 @@
                         android:layout_marginTop="@dimen/_8pxv"
                         android:layout_weight="0.95"
                         android:layout_width="0dp" android:orientation="horizontal">
-                        <FrameLayout android:id="@+id/frameStacksend"
-                            android:layout_height="@dimen/_32pxv"
-                            android:layout_width="@dimen/_32pxh" style="@style/groupStyle">
-                            <ImageView android:id="@+id/imageSend"
-                                android:layout_gravity="center"
-                                android:layout_height="@dimen/_27pxh"
-                                android:layout_marginBottom="@dimen/_3pxv"
-                                android:layout_marginEnd="@dimen/_2pxh"
-                                android:layout_marginStart="@dimen/_1pxh"
-                                android:layout_marginTop="@dimen/_2pxv"
-                                android:layout_width="@dimen/_28pxh"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/img_send"
-                                tools:ignore="ContentDescription" tools:src="@drawable/img_send"/>
-                        </FrameLayout>
+                        <ImageView android:id="@+id/imageSend"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_27pxh"
+                            android:layout_marginBottom="@dimen/_3pxv"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_width="@dimen/_28pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_starrate"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_starrate"/>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtRateMediFinder"
                             android:layout_height="wrap_content"
