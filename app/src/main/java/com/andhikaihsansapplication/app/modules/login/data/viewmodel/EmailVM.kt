@@ -1,13 +1,15 @@
 package com.andhikaihsansapplication.app.modules.login.data.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class EmailVM : ViewModel() {
-    val mutableString: MutableLiveData<String> = MutableLiveData("")
+    private val _email = MutableLiveData<String>()
 
-    fun updateValue(newValue: String) {
-        mutableString.value = newValue // setValue(newValue) juga dapat digunakan di UI thread
-        // mutableString.postValue(newValue) digunakan untuk dipanggil dari luar UI thread
+    val email: LiveData<String> = _email
+
+    fun simpanData(nama: String) {
+        _email.value = nama
     }
 }
