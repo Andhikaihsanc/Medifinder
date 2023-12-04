@@ -9,6 +9,9 @@ import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivityLogoutConfirmationBinding
 import com.andhikaihsansapplication.app.modules.logoutconfirmation.`data`.viewmodel.LogoutConfirmationVM
 import com.andhikaihsansapplication.app.modules.splashscreen.ui.SplashScreenActivity
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 import kotlin.String
 import kotlin.Unit
 
@@ -23,6 +26,9 @@ class LogoutConfirmationActivity :
 
   override fun setUpClicks(): Unit {
     binding.btnYesImSure.setOnClickListener {
+      val auth = FirebaseAuth.getInstance()
+      auth.signOut()
+
       val destIntent = SplashScreenActivity.getIntent(this, null)
       startActivity(destIntent)
     }
