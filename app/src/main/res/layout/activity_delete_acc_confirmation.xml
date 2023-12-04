@@ -14,7 +14,8 @@
             android:layout_marginBottom="@dimen/_20pxv"
             android:layout_marginEnd="@dimen/_35pxh"
             android:layout_marginStart="@dimen/_35pxh"
-            android:layout_marginTop="@dimen/_40pxv" android:layout_width="@dimen/_290pxh"/>
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="@dimen/_290pxh"/>
         <LinearLayout android:id="@+id/linearColumnconfirmation"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
@@ -26,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_24pxh"
                 android:layout_marginStart="@dimen/_30pxh"
+                android:layout_marginTop="@dimen/_35pxv"
                 android:layout_width="match_parent"
                 android:text="@{deleteAccConfirmationVM.deleteAccConfirmationModel.txtConfirmation}"
                 style="@style/txtJostromansemibold16_1" tools:text="@string/msg_are_you_sure_yo2"/>

@@ -14,54 +14,69 @@
             android:layout_marginBottom="@dimen/_20pxv"
             android:layout_marginEnd="@dimen/_35pxh"
             android:layout_marginStart="@dimen/_35pxh"
-            android:layout_marginTop="@dimen/_40pxv" android:layout_width="@dimen/_290pxh"/>
-        <LinearLayout android:id="@+id/linearColumnconfirmation"
-            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="@dimen/_290pxh"/>
+
+        <LinearLayout
+            android:id="@+id/linearColumnconfirmation"
+            android:layout_width="@dimen/_290pxh"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_40pxh"
-            android:layout_marginVertical="@dimen/_40pxv"
-            android:layout_width="wrap_content" android:orientation="vertical">
-            <TextView android:ellipsize="end"
-                android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
                 android:id="@+id/txtConfirmation"
+                style="@style/txtJostromansemibold15"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5pxh"
-                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
                 android:singleLine="true"
                 android:text="@{logoutConfirmationVM.logoutConfirmationModel.txtConfirmation}"
-                style="@style/txtJostromansemibold15" tools:text="@string/msg_are_you_sure_yo"/>
-            <LinearLayout android:id="@+id/linearRowyesImSure"
+                tools:text="@string/msg_are_you_sure_yo" />
+
+            <LinearLayout
+                android:id="@+id/linearRowyesImSure"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_1pxh"
                 android:layout_marginTop="@dimen/_29pxv"
-                android:layout_width="wrap_content" android:orientation="horizontal">
+                android:layout_marginStart="@dimen/_29pxh"
+                android:orientation="horizontal">
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
                     android:id="@+id/btnYesImSure"
-                    android:layout_height="@dimen/_32pxv"
+                    style="@style/btnSolidRounded_4"
                     android:layout_width="@dimen/_104pxh"
-                    android:paddingBottom="@dimen/_5pxv"
-                    android:paddingEnd="@dimen/_12pxh"
+                    android:layout_height="@dimen/_32pxv"
+                    android:ellipsize="end"
+                    android:gravity="center"
                     android:paddingStart="@dimen/_11pxh"
                     android:paddingTop="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_12pxh"
+                    android:paddingBottom="@dimen/_5pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_yes_i_m_sure"
                     android:textAllCaps="false"
-                    style="@style/btnSolidRounded_4" tools:text="@string/lbl_yes_i_m_sure"/>
+                    tools:text="@string/lbl_yes_i_m_sure" />
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
                     android:id="@+id/btnNo"
+                    style="@style/btnSolidRounded_4"
+                    android:layout_width="@dimen/_104pxh"
                     android:layout_height="@dimen/_32pxv"
                     android:layout_marginStart="@dimen/_27pxh"
-                    android:layout_width="@dimen/_104pxh"
-                    android:paddingBottom="@dimen/_5pxv"
-                    android:paddingEnd="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:gravity="center"
                     android:paddingStart="@dimen/_30pxh"
                     android:paddingTop="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_5pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_no"
                     android:textAllCaps="false"
-                    style="@style/btnSolidRounded_4" tools:text="@string/lbl_no"/>
+                    tools:text="@string/lbl_no" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
