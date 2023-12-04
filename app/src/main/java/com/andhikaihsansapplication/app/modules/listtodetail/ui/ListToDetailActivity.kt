@@ -3,6 +3,8 @@ package com.andhikaihsansapplication.app.modules.listtodetail.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
@@ -14,6 +16,11 @@ import com.andhikaihsansapplication.app.modules.listtodetail.`data`.viewmodel.Li
 import com.andhikaihsansapplication.app.modules.mainpage.ui.MainPageActivity
 import com.andhikaihsansapplication.app.modules.manageaccount.ui.ManageAccountActivity
 import com.andhikaihsansapplication.app.modules.rate.ui.RateActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -27,6 +34,42 @@ class ListToDetailActivity :
 
   private val REQUEST_CODE_EDIT_PROFILE_ACTIVITY: Int = 224
 
+  override fun onResume() {
+    super.onResume()
+
+    val fullNameText = findViewById<TextView>(R.id.txtVerizcaMaudia)
+    val phoneNumber = findViewById<TextView>(R.id.txt62858123456)
+    val email = findViewById<TextView>(R.id.txtEmail)
+
+    // firebase auth and current user
+    var auth = FirebaseAuth.getInstance();
+    var currentUserEmail = auth.currentUser?.email
+
+    // firebase realtime
+    var database = FirebaseDatabase.getInstance()
+    var usersRef = database.getReference("users")
+    var query = usersRef.orderByChild("email").equalTo(currentUserEmail.toString())
+
+    // mencari username
+    query.addListenerForSingleValueEvent(object : ValueEventListener {
+      override fun onDataChange(snapshot: DataSnapshot) {
+        for (userSnapshot in snapshot.children) {
+          usersRef.child(userSnapshot.key.toString()).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshotUser: DataSnapshot) {
+              val snapshotValue = snapshotUser.getValue() // Mengambil nilai dari snapshot
+              val map: Map<String, Any>? = snapshotValue as? Map<String, Any>
+
+              fullNameText.text = map?.get("fullName").toString()
+              phoneNumber.text = map?.get("phoneNumber").toString()
+              email.text = map?.get("email").toString()
+            }
+            override fun onCancelled(error: DatabaseError) {}
+          })
+        }
+      }
+      override fun onCancelled(error: DatabaseError) {}
+    })
+  }
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
