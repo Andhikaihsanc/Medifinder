@@ -1,12 +1,17 @@
 package com.andhikaihsansapplication.app.modules.mainpage.ui
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.databinding.RowMainPageBinding
+import com.andhikaihsansapplication.app.modules.editprofile.ui.EditProfileActivity
 import com.andhikaihsansapplication.app.modules.mainpage.`data`.model.MainPageRowModel
+import com.andhikaihsansapplication.app.modules.spesialisjantung.ui.SpesialisJantungActivity
 import kotlin.Int
 import kotlin.collections.List
 
@@ -54,14 +59,27 @@ class MainPageAdapter(
   ) : RecyclerView.ViewHolder(view) {
     val binding: RowMainPageBinding = RowMainPageBinding.bind(itemView)
     init {
+      binding.btnUser.setOnClickListener{
+          val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+          intent.putExtra("CURRENT_KATEGORI", "Umum")
+          itemView.context.startActivity(intent)
+          Toast.makeText(itemView.context, "haiii ini adalah dokter umum", Toast.LENGTH_SHORT).show()
+      }
       binding.btnTelevision.setOnClickListener {
-        // TODO replace with value from datasource
-        clickListener?.onItemClick(it, adapterPosition, MainPageRowModel())
+          val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+          intent.putExtra("CURRENT_KATEGORI", "Gigi")
+          itemView.context.startActivity(intent)
+          Toast.makeText(itemView.context, "haiii ini adalah dokter gigi", Toast.LENGTH_SHORT).show()
       }
       binding.btnAirplane.setOnClickListener {
-        // TODO replace with value from datasource
-        clickListener?.onItemClick(it, adapterPosition, MainPageRowModel())
+          val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+          intent.putExtra("CURRENT_KATEGORI", "Jantung")
+          itemView.context.startActivity(intent)
+          Toast.makeText(itemView.context, "haiii ini adalah dokter jantung", Toast.LENGTH_SHORT).show()
       }
     }
   }
 }
+
+//        // TODO replace with value from datasource
+//        clickListener?.onItemClick(it, adapterPosition, MainPageRowModel())

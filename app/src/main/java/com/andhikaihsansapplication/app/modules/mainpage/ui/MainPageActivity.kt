@@ -26,7 +26,7 @@ import kotlin.Int
 import kotlin.String
 import kotlin.Unit
 
-class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity_main_page) {
+class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity_main_page){
 
   private val viewModel: MainPageVM by viewModels<MainPageVM>(
 
@@ -91,7 +91,6 @@ class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity
   }
 
   override fun setUpClicks(): Unit {
-
     binding.imageSettings.setOnClickListener {
       val destIntent = ListToDetailActivity.getIntent(this, null)
       startActivityForResult(destIntent, REQUEST_CODE_LIST_TO_DETAIL_ACTIVITY)

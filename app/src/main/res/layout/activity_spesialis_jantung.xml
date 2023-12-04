@@ -49,6 +49,17 @@
                     android:paddingVertical="@dimen/_13pxv"
                     android:scaleType="fitCenter"
                     android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+
+                <TextView
+                    android:ellipsize="end"
+                    android:id="@+id/listHeaderText"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3pxh"
+                    android:layout_weight="0.85"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:text="Makanan"
+                    style="@style/txtJostromanbold26" tools:text="makanan" />
             </LinearLayout>
                 <androidx.appcompat.widget.SearchView
                     android:background="@drawable/rectangle_border_black_900_radius_24_5"
@@ -63,17 +74,20 @@
                     app:queryBackground="@android:color/transparent"
                     app:queryHint="Find Hospital" app:searchIcon="@drawable/img_search"/>
             </LinearLayout>
+
                 <androidx.recyclerview.widget.RecyclerView
-                    android:gravity="center_horizontal"
                     android:id="@+id/recyclerListbrawijayaunive"
+                    itemSpace="@{@dimen/_20pxh}"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8pxh"
-                    android:layout_marginTop="@dimen/_93pxv"
-                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:gravity="center_horizontal"
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="6" tools:listitem="@layout/row_listbrawijayaunive"/>
+                    tools:itemCount="6"
+                    tools:listitem="@layout/row_listbrawijayaunive" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

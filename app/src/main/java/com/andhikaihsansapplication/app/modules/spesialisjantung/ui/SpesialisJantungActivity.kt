@@ -4,12 +4,19 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivitySpesialisJantungBinding
 import com.andhikaihsansapplication.app.modules.spesialisjantung.`data`.model.ListbrawijayauniveRowModel
 import com.andhikaihsansapplication.app.modules.spesialisjantung.`data`.viewmodel.SpesialisJantungVM
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -17,6 +24,13 @@ import kotlin.Unit
 class SpesialisJantungActivity :
     BaseActivity<ActivitySpesialisJantungBinding>(R.layout.activity_spesialis_jantung) {
   private val viewModel: SpesialisJantungVM by viewModels<SpesialisJantungVM>()
+
+  override fun onResume() {
+    super.onResume()
+
+    val listHeaderText = findViewById<TextView>(R.id.listHeaderText)
+    listHeaderText.text = intent.getStringExtra("CURRENT_KATEGORI")
+  }
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
