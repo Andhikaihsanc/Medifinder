@@ -27,7 +27,7 @@
                 android:layout_marginStart="@dimen/_1pxh"
                 android:layout_width="match_parent"
                 android:text="@{listbrawijayauniveRowModel.txtBrawijayaUnive}"
-                style="@style/txtJostromanbold12" tools:text="@string/msg_brawijaya_unive"/>
+                style="@style/txtJostromanbold12" tools:text="@string/msg_brawijaya_unive" />
             <LinearLayout android:id="@+id/linearRowlocation"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2pxh"
