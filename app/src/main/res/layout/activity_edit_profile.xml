@@ -83,7 +83,7 @@
                     tools:src="@drawable/img_user" />
             </FrameLayout>
 
-            <EditText
+            <TextView
                 android:id="@+id/etFullname"
                 style="@style/etSolidRounded"
                 android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                 android:textColorHint="@color/deep_orange_50"
                 tools:ignore="Autofill" />
 
-            <EditText
+            <TextView
                 android:id="@+id/etEmail"
                 style="@style/etSolidRounded"
                 android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                 android:textColorHint="@color/deep_orange_50"
                 tools:ignore="Autofill" />
 
-            <EditText
+            <TextView
                 android:id="@+id/etPhone"
                 style="@style/etSolidRounded"
                 android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                 android:textColorHint="@color/deep_orange_50"
                 tools:ignore="Autofill" />
 
-            <EditText
+            <TextView
                 android:id="@+id/etAddress"
                 style="@style/etSolidRounded"
                 android:layout_width="match_parent"

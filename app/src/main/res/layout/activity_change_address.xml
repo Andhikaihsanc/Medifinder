@@ -14,24 +14,29 @@
             android:layout_marginBottom="@dimen/_20pxv"
             android:layout_marginEnd="@dimen/_35pxh"
             android:layout_marginStart="@dimen/_35pxh"
-            android:layout_marginTop="@dimen/_40pxv" android:layout_width="@dimen/_290pxh"/>
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="@dimen/_290pxh"/>
         <LinearLayout android:id="@+id/linearColumnlineeleven"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_40pxh"
             android:layout_marginVertical="@dimen/_40pxv"
             android:layout_width="match_parent" android:orientation="vertical">
-            <View android:background="@color/deep_orange_50"
+            <EditText
                 android:id="@+id/lineLineEleven"
-                android:layout_gravity="start"
-                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_258pxh"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:layout_height="@dimen/_40pxv"
+                android:layout_width="@dimen/_258pxh"
+                android:inputType="text"
+                android:backgroundTint="@color/white"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnChangeAddress"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_50pxh"
                 android:layout_marginStart="@dimen/_50pxh"
-                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_marginTop="@dimen/_10pxv"
                 android:layout_width="match_parent"
                 android:paddingBottom="@dimen/_5pxv"
                 android:paddingEnd="@dimen/_25pxh"

@@ -21,17 +21,21 @@
             android:layout_marginHorizontal="@dimen/_40pxh"
             android:layout_marginVertical="@dimen/_40pxv"
             android:layout_width="match_parent" android:orientation="vertical">
-            <View android:background="@color/deep_orange_50"
+            <EditText
                 android:id="@+id/lineLineEleven"
-                android:layout_gravity="start"
-                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_258pxh"/>
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_40pxv"
+                android:layout_width="@dimen/_258pxh"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:backgroundTint="@color/white"
+                android:inputType="phone"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnChangePhoneNumber"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_45pxh"
                 android:layout_marginStart="@dimen/_45pxh"
-                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_marginTop="@dimen/_10pxv"
                 android:layout_width="match_parent"
                 android:paddingBottom="@dimen/_5pxv"
                 android:paddingEnd="@dimen/_9pxh"
