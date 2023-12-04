@@ -33,17 +33,20 @@
                     android:paddingVertical="@dimen/_13pxv"
                     android:scaleType="fitCenter"
                     android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+
                 <androidx.recyclerview.widget.RecyclerView
-                    android:gravity="center_horizontal"
                     android:id="@+id/recyclerGigi"
+                    itemSpace="@{@dimen/_20pxh}"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8pxh"
                     android:layout_marginTop="@dimen/_93pxv"
-                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="6" tools:listitem="@layout/row_gigi"/>
+                    tools:itemCount="6"
+                    tools:listitem="@layout/row_gigi" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
