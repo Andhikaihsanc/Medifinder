@@ -9,7 +9,7 @@ class EmailVM : ViewModel() {
 
     val email: LiveData<String> = _email
 
-    fun simpanData(nama: String) {
-        _email.value = nama
+    fun simpanData(email: String) {
+        _email.value = email
     }
 }

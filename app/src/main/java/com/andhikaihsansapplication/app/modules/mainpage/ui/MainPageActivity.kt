@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
@@ -15,12 +17,20 @@ import com.andhikaihsansapplication.app.modules.mainpage.`data`.model.MainPageRo
 import com.andhikaihsansapplication.app.modules.mainpage.`data`.viewmodel.MainPageVM
 import com.andhikaihsansapplication.app.modules.spesialisjantung.ui.SpesialisJantungActivity
 import com.andhikaihsansapplication.app.modules.swipekanantwo.ui.SwipeKananTwoActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
 
 class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity_main_page) {
-  private val viewModel: MainPageVM by viewModels<MainPageVM>()
+
+  private val viewModel: MainPageVM by viewModels<MainPageVM>(
+
+  )
 
   private val REQUEST_CODE_LIST_TO_DETAIL_ACTIVITY: Int = 362
 
@@ -36,6 +46,32 @@ class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity
 
   private val REQUEST_CODE_SPESIALIS_JANTUNG_ACTIVITY: Int = 216
 
+  override fun onResume() {
+    super.onResume()
+
+    val headerText = findViewById<TextView>(R.id.txtWelcomeVerizc)
+
+    // firebase auth and current user
+    var auth = FirebaseAuth.getInstance();
+    var currentUserEmail = auth.currentUser?.email
+
+    // firebase realtime
+    var database = FirebaseDatabase.getInstance()
+    var usersRef = database.getReference("users")
+    var query = usersRef.orderByChild("email").equalTo(currentUserEmail.toString())
+
+    // mencari username
+    query.addListenerForSingleValueEvent(object : ValueEventListener {
+      override fun onDataChange(snapshot: DataSnapshot) {
+        for (userSnapshot in snapshot.children) {
+          Toast.makeText(baseContext, userSnapshot.key.toString(), Toast.LENGTH_SHORT).show()
+          headerText.text = " Welcome, ${userSnapshot.key.toString()}"
+        }
+      }
+
+      override fun onCancelled(error: DatabaseError) {}
+    })
+  }
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("")
@@ -55,6 +91,7 @@ class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity
   }
 
   override fun setUpClicks(): Unit {
+
     binding.imageSettings.setOnClickListener {
       val destIntent = ListToDetailActivity.getIntent(this, null)
       startActivityForResult(destIntent, REQUEST_CODE_LIST_TO_DETAIL_ACTIVITY)
