@@ -64,7 +64,6 @@ class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity
     query.addListenerForSingleValueEvent(object : ValueEventListener {
       override fun onDataChange(snapshot: DataSnapshot) {
         for (userSnapshot in snapshot.children) {
-          Toast.makeText(baseContext, userSnapshot.key.toString(), Toast.LENGTH_SHORT).show()
           headerText.text = " Welcome, ${userSnapshot.key.toString()}"
         }
       }

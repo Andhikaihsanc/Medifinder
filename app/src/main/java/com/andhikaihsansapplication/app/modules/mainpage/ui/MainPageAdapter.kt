@@ -61,22 +61,61 @@ class MainPageAdapter(
     init {
       binding.btnUser.setOnClickListener{
           val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
-          intent.putExtra("CURRENT_KATEGORI", "Umum")
+          intent.putExtra("CURRENT_KATEGORI", "umum")
           itemView.context.startActivity(intent)
           Toast.makeText(itemView.context, "haiii ini adalah dokter umum", Toast.LENGTH_SHORT).show()
       }
       binding.btnTelevision.setOnClickListener {
           val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
-          intent.putExtra("CURRENT_KATEGORI", "Gigi")
+          intent.putExtra("CURRENT_KATEGORI", "gigi")
           itemView.context.startActivity(intent)
           Toast.makeText(itemView.context, "haiii ini adalah dokter gigi", Toast.LENGTH_SHORT).show()
       }
       binding.btnAirplane.setOnClickListener {
           val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
-          intent.putExtra("CURRENT_KATEGORI", "Jantung")
+          intent.putExtra("CURRENT_KATEGORI", "jantung")
           itemView.context.startActivity(intent)
-          Toast.makeText(itemView.context, "haiii ini adalah dokter jantung", Toast.LENGTH_SHORT).show()
       }
+        binding.btnLock.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "anak")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnOrthopedi.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "orthopedi")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnProgramKehamilan.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "obgyn")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnPenyakitdalam.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "penyakit_dalam")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnAhliBedah.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "bedah")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnLab.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "pemeriksaan_lab")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnparu2.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "paru")
+            itemView.context.startActivity(intent)
+        }
+        binding.btnPsikologi.setOnClickListener {
+            val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
+            intent.putExtra("CURRENT_KATEGORI", "jiwa")
+            itemView.context.startActivity(intent)
+        }
     }
   }
 }
