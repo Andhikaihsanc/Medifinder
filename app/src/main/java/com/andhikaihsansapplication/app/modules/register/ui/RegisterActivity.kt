@@ -68,8 +68,6 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
       val confirmPassword = findViewById<EditText>((R.id.lineLineSix))
       val confirmpasswordInputValue = confirmPassword.text.toString()
 
-      Toast.makeText(this, "username = $usernameInputValue", Toast.LENGTH_SHORT).show()
-
       progressBar = findViewById(R.id.progressBar)
       progressBar.visibility = View.VISIBLE
 
