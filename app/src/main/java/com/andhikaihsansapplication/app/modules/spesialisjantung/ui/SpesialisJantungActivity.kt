@@ -83,8 +83,6 @@ class SpesialisJantungActivity :
                 var alamatRS = map?.get("address").toString()
                 var noRS = map?.get("er_contact").toString()
 
-//                val rumahSakit = RumahSakit(namaRS, alamatRS, noRS)
-//                viewModelRS.tambahRumahSakit(rumahSakit)
                 val rumahSakit = RumahSakit(namaRS, alamatRS, noRS)
                 rumahSakitList.add(rumahSakit) // Tambahkan ke list lokal
               }
@@ -99,23 +97,6 @@ class SpesialisJantungActivity :
       }
       override fun onCancelled(error: DatabaseError) {}
     })
-
-//    recyclerView = findViewById(R.id.recyclerListbrawijayaunive)
-//    recyclerView.layoutManager = LinearLayoutManager(this)
-//    rumahSakitAdapter = RumahSakitAdapter(rumahSakitList, this)
-//    recyclerView.adapter = rumahSakitAdapter
-
-
-//    val rumahSakitList = listOf(
-//      RumahSakit("Rumah Sakit A", "Jl. A No. 1", "0813356188823"),
-//      RumahSakit("Rumah Sakit B", "Jl. B No. 2", "0813356188823"),
-//      RumahSakit("Rumah Sakit C", "Jl. C No. 3", "0813356188823")
-//    )
-
-//    recyclerView = findViewById(R.id.recyclerListbrawijayaunive)
-//    recyclerView.layoutManager = LinearLayoutManager(this)
-//    rumahSakitAdapter = RumahSakitAdapter(rumahSakitList, this)
-//    recyclerView.adapter = rumahSakitAdapter
   }
 
   override fun onRumahSakitClicked(rumahSakit: RumahSakit) {
