@@ -61,6 +61,17 @@
                     android:text="Makanan"
                     style="@style/txtJostromanbold26" tools:text="makanan" />
             </LinearLayout>
+                <TextView
+                    android:id="@+id/txtNearestHospita"
+                    style="@style/txtJostromanbold26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:visibility="gone"
+                    tools:text="@string/msg_nearest_hospita" />
+
                 <androidx.appcompat.widget.SearchView
                     android:background="@drawable/rectangle_border_black_900_radius_24_5"
                     android:gravity="center_horizontal"
@@ -72,6 +83,7 @@
                     android:theme="@style/searchViewButtonCustomT"
                     app:iconifiedByDefault="false"
                     app:queryBackground="@android:color/transparent"
+                    android:visibility="visible"
                     app:queryHint="Find Hospital" app:searchIcon="@drawable/img_search"/>
             </LinearLayout>
 
