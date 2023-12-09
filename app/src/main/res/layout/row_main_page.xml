@@ -13,55 +13,108 @@
             android:id="@+id/linearRowuser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btnUser"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_10pxh"
-                android:paddingVertical="@dimen/_10pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_dokter_umum"
-                tools:ignore="ContentDescription" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnUser"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_dokter_umum"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:textSize="@dimen/_10pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/kategori1"/>
 
-            <ImageButton
-                android:id="@+id/btnTelevision"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_13pxh"
-                android:paddingVertical="@dimen/_13pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_gigi"
-                tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnTelevision"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_gigi"
+                    tools:ignore="ContentDescription"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori2"
+                    android:textSize="@dimen/_10pxh" />
 
-            <ImageButton
-                android:id="@+id/btnAirplane"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_12pxh"
-                android:paddingVertical="@dimen/_12pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_jantung"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnLock"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_13pxh"
-                android:paddingVertical="@dimen/_13pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_anak"
-                tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnAirplane"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_12pxh"
+                    android:paddingVertical="@dimen/_12pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_jantung"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori3"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnLock"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_anak"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori4"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Row Dua -->
@@ -69,55 +122,105 @@
             android:id="@+id/linearRowuser2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
-
-            <ImageButton
-                android:id="@+id/btnOrthopedi"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_10pxh"
-                android:paddingVertical="@dimen/_10pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_orthopedi"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnProgramKehamilan"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_13pxh"
-                android:paddingVertical="@dimen/_13pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_kehamilan"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnPenyakitdalam"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_12pxh"
-                android:paddingVertical="@dimen/_12pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_penyakit_dalam"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnAhliBedah"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_13pxh"
-                android:paddingVertical="@dimen/_13pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_ahli_bedah"
-                tools:ignore="ContentDescription" />
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnOrthopedi"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_orthopedi"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori5"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnProgramKehamilan"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_kehamilan"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori6"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnPenyakitdalam"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_12pxh"
+                    android:paddingVertical="@dimen/_12pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_penyakit_dalam"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori7"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnAhliBedah"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_ahli_bedah"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori8"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Row Tiga -->
@@ -127,53 +230,104 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingVertical="5dp">
-
-            <ImageButton
-                android:id="@+id/btnLab"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_10pxh"
-                android:paddingVertical="@dimen/_10pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_lab"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnparu2"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_13pxh"
-                android:paddingVertical="@dimen/_13pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_paruparu"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnPsikologi"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_12pxh"
-                android:paddingVertical="@dimen/_12pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_psikologi"
-                tools:ignore="ContentDescription" />
-
-            <ImageButton
-                android:id="@+id/btnLainnya"
-                android:layout_width="@dimen/_60pxh"
-                android:layout_height="@dimen/_60pxh"
-                android:layout_marginStart="@dimen/_21pxh"
-                android:background="@drawable/rectangle_bg_red_900_radius_20"
-                android:paddingHorizontal="@dimen/_13pxh"
-                android:paddingVertical="@dimen/_13pxv"
-                android:scaleType="fitCenter"
-                android:src="@drawable/img_lainnya"
-                tools:ignore="ContentDescription" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnLab"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_lab"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori9"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnparu2"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_paruparu"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori10"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnPsikologi"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_12pxh"
+                    android:paddingVertical="@dimen/_12pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_psikologi"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori11"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnLainnya"
+                    android:layout_width="@dimen/_60pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:background="@drawable/rectangle_bg_red_900_radius_20"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_lainnya"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jostromansemibold"
+                    android:textColor="@color/black_900"
+                    android:text="@string/kategori12"
+                    android:textSize="@dimen/_10pxh" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </layout>

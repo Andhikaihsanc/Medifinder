@@ -4,7 +4,7 @@
     <string name="loading">Loading?</string>
     <string name="no_internet_connection">No internet connection!</string>
     <string name="lbl_continue">Continue</string>
-    <string name="msg_forgotten_your"><u>Forgotten Your Password?</u></string>
+    <string name="msg_forgotten_your"><u>Forgot Your Password?</u></string>
     <string name="lbl_help_centre">Help Centre</string>
     <string name="msg_jaksa_agung_sup">Jaksa Agung Suprapto St. Number 2, Klojen, Klojen, Malang CIty, East Java 65112</string>
     <string name="lbl_next">Next</string>
@@ -95,4 +95,16 @@ Hospital information service applications are now the primary solution in this d
     <string name="msg_camera_storage_permission">This Application need permission\n1.Camera permission to capture the image.\n2.Storage Access permission to save the captured image.</string>
     <string name="lbl_camera">Camera</string>
     <string name="lbl_gallery">Gallery</string>
+    <string name="kategori1">Umum</string>
+    <string name="kategori2">Gigi</string>
+    <string name="kategori3">Jantung</string>
+    <string name="kategori4">Anak</string>
+    <string name="kategori5">Orthopedi</string>
+    <string name="kategori6">Obgyn</string>
+    <string name="kategori7">Penyakit Dalam</string>
+    <string name="kategori8">Bedah</string>
+    <string name="kategori9">Laboratorium</string>
+    <string name="kategori10">Paru-Paru</string>
+    <string name="kategori11">Kejiwaan</string>
+    <string name="kategori12">Lainnya</string>
 </resources>
