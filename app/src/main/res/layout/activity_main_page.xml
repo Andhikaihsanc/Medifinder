@@ -86,7 +86,7 @@
                         android:id="@+id/recyclerMainPage"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5pxh"
-                        android:layout_marginBottom="@dimen/_15pxv"
+                        android:layout_marginBottom="@dimen/_25pxv"
                         android:layout_marginEnd="@dimen/_28pxh"
                         android:layout_marginStart="@dimen/_28pxh"
                         android:layout_width="match_parent"

@@ -89,6 +89,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
       val passwordInput = findViewById<EditText>((R.id.lineLineTwo))
       val passwordInputVaue = passwordInput.text.toString()
 
+      if(usernameInputValue == "" || passwordInputVaue == ""){
+        Toast.makeText(baseContext, "Data tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+        return@setOnClickListener
+      }
+
       progressBar = findViewById(R.id.progressBar)
       progressBar.visibility = View.VISIBLE
 
