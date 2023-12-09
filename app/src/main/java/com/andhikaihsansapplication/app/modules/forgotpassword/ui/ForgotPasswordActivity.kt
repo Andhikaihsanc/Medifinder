@@ -3,6 +3,8 @@ package com.andhikaihsansapplication.app.modules.forgotpassword.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
@@ -10,6 +12,8 @@ import com.andhikaihsansapplication.app.databinding.ActivityForgotPasswordBindin
 import com.andhikaihsansapplication.app.modules.credentials.ui.CredentialsActivity
 import com.andhikaihsansapplication.app.modules.forgotpassword.`data`.viewmodel.ForgotPasswordVM
 import com.andhikaihsansapplication.app.modules.login.ui.LoginActivity
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 import kotlin.String
 import kotlin.Unit
 
@@ -23,8 +27,20 @@ class ForgotPasswordActivity :
   }
 
   override fun setUpClicks(): Unit {
+
     binding.txtSendlink.setOnClickListener {
-      val destIntent = CredentialsActivity.getIntent(this, null)
+      val emailInput = findViewById<EditText>(R.id.lineLineOne)
+      val emailInputValue = emailInput.text.toString()
+
+      Firebase.auth.sendPasswordResetEmail(emailInputValue)
+        .addOnCompleteListener { task ->
+          if (task.isSuccessful) {
+            Toast.makeText(baseContext, "Email sent.", Toast.LENGTH_SHORT,).show()
+            Toast.makeText(baseContext, "Login with your new password", Toast.LENGTH_SHORT,).show()
+          }
+        }
+
+      val destIntent = LoginActivity.getIntent(this, null)
       startActivity(destIntent)
     }
   }

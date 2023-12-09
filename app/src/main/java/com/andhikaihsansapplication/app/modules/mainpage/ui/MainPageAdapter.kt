@@ -63,13 +63,13 @@ class MainPageAdapter(
           val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
           intent.putExtra("CURRENT_KATEGORI", "umum")
           itemView.context.startActivity(intent)
-          Toast.makeText(itemView.context, "haiii ini adalah dokter umum", Toast.LENGTH_SHORT).show()
+//          Toast.makeText(itemView.context, "haiii ini adalah dokter umum", Toast.LENGTH_SHORT).show()
       }
       binding.btnTelevision.setOnClickListener {
           val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)
           intent.putExtra("CURRENT_KATEGORI", "gigi")
           itemView.context.startActivity(intent)
-          Toast.makeText(itemView.context, "haiii ini adalah dokter gigi", Toast.LENGTH_SHORT).show()
+//          Toast.makeText(itemView.context, "haiii ini adalah dokter gigi", Toast.LENGTH_SHORT).show()
       }
       binding.btnAirplane.setOnClickListener {
           val intent = Intent(itemView.context, SpesialisJantungActivity::class.java)

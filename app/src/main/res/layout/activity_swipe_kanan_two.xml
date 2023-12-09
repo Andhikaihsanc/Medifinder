@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="swipeKananTwoVM" type="com.andhikaihsansapplication.app.modules.swipekanantwo.data.viewmodel.SwipeKananTwoVM"/>
     </data>
@@ -76,50 +78,63 @@
                     android:text="@{swipeKananTwoVM.swipeKananTwoModel.txtNearestHospita}"
                     tools:text="@string/msg_nearest_hospita" />
 
-                <View
-                    android:id="@+id/viewRs1"
-                    android:layout_width="@dimen/_315pxh"
-                    android:layout_height="@dimen/_149pxv"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_5pxh"
-                    android:layout_marginTop="@dimen/_37pxv"
-                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerListbrawijayaunive"
+                    itemSpace="@{@dimen/_20pxh}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:gravity="center_horizontal"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_listbrawijayaunive" />
 
-                <View
-                    android:id="@+id/viewRs2"
-                    android:layout_width="@dimen/_315pxh"
-                    android:layout_height="@dimen/_149pxv"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_5pxh"
-                    android:layout_marginTop="@dimen/_37pxv"
-                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+<!--                <View-->
+<!--                    android:id="@+id/viewRs1"-->
+<!--                    android:layout_width="@dimen/_315pxh"-->
+<!--                    android:layout_height="@dimen/_149pxv"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="@dimen/_5pxh"-->
+<!--                    android:layout_marginTop="@dimen/_37pxv"-->
+<!--                    android:background="@drawable/rectangle_bg_red_700_radius_10" />-->
 
-                <View
-                    android:id="@+id/viewRs3"
-                    android:layout_width="@dimen/_315pxh"
-                    android:layout_height="@dimen/_149pxv"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_5pxh"
-                    android:layout_marginTop="@dimen/_37pxv"
-                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+<!--                <View-->
+<!--                    android:id="@+id/viewRs2"-->
+<!--                    android:layout_width="@dimen/_315pxh"-->
+<!--                    android:layout_height="@dimen/_149pxv"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="@dimen/_5pxh"-->
+<!--                    android:layout_marginTop="@dimen/_37pxv"-->
+<!--                    android:background="@drawable/rectangle_bg_red_700_radius_10" />-->
 
-                <View
-                    android:id="@+id/viewRs4"
-                    android:layout_width="@dimen/_315pxh"
-                    android:layout_height="@dimen/_149pxv"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_5pxh"
-                    android:layout_marginTop="@dimen/_37pxv"
-                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+<!--                <View-->
+<!--                    android:id="@+id/viewRs3"-->
+<!--                    android:layout_width="@dimen/_315pxh"-->
+<!--                    android:layout_height="@dimen/_149pxv"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="@dimen/_5pxh"-->
+<!--                    android:layout_marginTop="@dimen/_37pxv"-->
+<!--                    android:background="@drawable/rectangle_bg_red_700_radius_10" />-->
 
-                <View
-                    android:id="@+id/viewRs5"
-                    android:layout_width="@dimen/_315pxh"
-                    android:layout_height="@dimen/_149pxv"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_5pxh"
-                    android:layout_marginTop="@dimen/_37pxv"
-                    android:background="@drawable/rectangle_bg_red_700_radius_10" />
+<!--                <View-->
+<!--                    android:id="@+id/viewRs4"-->
+<!--                    android:layout_width="@dimen/_315pxh"-->
+<!--                    android:layout_height="@dimen/_149pxv"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="@dimen/_5pxh"-->
+<!--                    android:layout_marginTop="@dimen/_37pxv"-->
+<!--                    android:background="@drawable/rectangle_bg_red_700_radius_10" />-->
+
+<!--                <View-->
+<!--                    android:id="@+id/viewRs5"-->
+<!--                    android:layout_width="@dimen/_315pxh"-->
+<!--                    android:layout_height="@dimen/_149pxv"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="@dimen/_5pxh"-->
+<!--                    android:layout_marginTop="@dimen/_37pxv"-->
+<!--                    android:background="@drawable/rectangle_bg_red_700_radius_10" />-->
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

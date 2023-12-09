@@ -3,7 +3,9 @@ package com.andhikaihsansapplication.app.modules.register.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
@@ -37,6 +39,38 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.registerVM = viewModel
+
+    val password = findViewById<EditText>(R.id.lineLineFive)
+    password.setOnTouchListener { v, event ->
+      val right = 2 // Index of the right drawable
+      if (event.action == MotionEvent.ACTION_UP) {
+        if (event.rawX >= (password.right - password.compoundDrawables[right].bounds.width())) {
+          val isPasswordVisible = password.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+          password.inputType = if (isPasswordVisible) InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD else InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+          val drawableId = if (isPasswordVisible) R.drawable.baseline_visibility_off_24 else R.drawable.baseline_visibility_24
+          password.setCompoundDrawablesWithIntrinsicBounds(null, null, resources.getDrawable(drawableId), null)
+          password.setSelection(password.length())
+          return@setOnTouchListener true
+        }
+      }
+      false
+    }
+
+    val confirmpassword = findViewById<EditText>(R.id.lineLineSix)
+    confirmpassword.setOnTouchListener { v, event ->
+      val right = 2 // Index of the right drawable
+      if (event.action == MotionEvent.ACTION_UP) {
+        if (event.rawX >= (confirmpassword.right - confirmpassword.compoundDrawables[right].bounds.width())) {
+          val isPasswordVisible = confirmpassword.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+          confirmpassword.inputType = if (isPasswordVisible) InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD else InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+          val drawableId = if (isPasswordVisible) R.drawable.baseline_visibility_off_24 else R.drawable.baseline_visibility_24
+          confirmpassword.setCompoundDrawablesWithIntrinsicBounds(null, null, resources.getDrawable(drawableId), null)
+          confirmpassword.setSelection(confirmpassword.length())
+          return@setOnTouchListener true
+        }
+      }
+      false
+    }
   }
 
   override fun setUpClicks(): Unit {
@@ -67,8 +101,6 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
       // ambil value confirm password
       val confirmPassword = findViewById<EditText>((R.id.lineLineSix))
       val confirmpasswordInputValue = confirmPassword.text.toString()
-
-      Toast.makeText(this, "username = $usernameInputValue", Toast.LENGTH_SHORT).show()
 
       progressBar = findViewById(R.id.progressBar)
       progressBar.visibility = View.VISIBLE

@@ -7,12 +7,14 @@ import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivitySwipeKananTwoBinding
+import com.andhikaihsansapplication.app.modules.spesialisjantung.recyclerHandler.RumahSakit
+import com.andhikaihsansapplication.app.modules.spesialisjantung.recyclerHandler.RumahSakitClickListener
 import com.andhikaihsansapplication.app.modules.swipekanantwo.`data`.viewmodel.SwipeKananTwoVM
 import kotlin.String
 import kotlin.Unit
 
 class SwipeKananTwoActivity :
-    BaseActivity<ActivitySwipeKananTwoBinding>(R.layout.activity_swipe_kanan_two) {
+    BaseActivity<ActivitySwipeKananTwoBinding>(R.layout.activity_swipe_kanan_two), RumahSakitClickListener {
   private val viewModel: SwipeKananTwoVM by viewModels<SwipeKananTwoVM>()
 
   override fun onInitialized(): Unit {
@@ -35,5 +37,9 @@ class SwipeKananTwoActivity :
       destIntent.putExtra("bundle", bundle)
       return destIntent
     }
+  }
+
+  override fun onRumahSakitClicked(rumahSakit: RumahSakit) {
+    TODO("Not yet implemented")
   }
 }

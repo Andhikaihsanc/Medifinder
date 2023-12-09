@@ -10,14 +10,18 @@ import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivitySplashScreenBinding
 import com.andhikaihsansapplication.app.modules.onboardingone.ui.OnBoardingOneActivity
+import com.andhikaihsansapplication.app.modules.spesialisjantung.ui.SpesialisJantungActivity
 import com.andhikaihsansapplication.app.modules.splashscreen.`data`.viewmodel.SplashScreenVM
 import com.andhikaihsansapplication.app.modules.swipekanan.ui.SwipeKananActivity
+import com.andhikaihsansapplication.app.modules.swipekanantwo.ui.SwipeKananTwoActivity
 import kotlin.String
 import kotlin.Unit
 
 class SplashScreenActivity :
     BaseActivity<ActivitySplashScreenBinding>(R.layout.activity_splash_screen) {
   private val viewModel: SplashScreenVM by viewModels<SplashScreenVM>()
+
+  private val REQUEST_CODE_SPESIALIS_JANTUNG_ACTIVITY: Int = 216
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
@@ -32,7 +36,7 @@ class SplashScreenActivity :
       }
 
       binding.btnEmergencyalert.setOnClickListener{
-        val destIntent = SwipeKananActivity.getIntent(this,null)
+        val destIntent = SpesialisJantungActivity.getIntent(this,null)
         startActivity(destIntent)
       }
 
@@ -40,6 +44,12 @@ class SplashScreenActivity :
         val destIntent = SwipeKananActivity.getIntent(this,null)
         startActivity(destIntent)
       }
+
+//      binding.btnEmergencyalert.setOnClickListener{
+//        val destIntent = SwipeKananActivity.getIntent(this, null)
+//        destIntent.putExtra("CURRENT_KATEGORI", "makanan")
+//        startActivityForResult(destIntent, REQUEST_CODE_SPESIALIS_JANTUNG_ACTIVITY)
+//      }
     }
 
 

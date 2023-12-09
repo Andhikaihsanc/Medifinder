@@ -8,7 +8,9 @@ import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivityManageAccountBinding
 import com.andhikaihsansapplication.app.modules.deleteaccconfirmation.ui.DeleteAccConfirmationActivity
+import com.andhikaihsansapplication.app.modules.editprofile.ui.EditProfileActivity
 import com.andhikaihsansapplication.app.modules.logoutconfirmation.ui.LogoutConfirmationActivity
+import com.andhikaihsansapplication.app.modules.mainpage.ui.MainPageActivity
 import com.andhikaihsansapplication.app.modules.manageaccount.`data`.viewmodel.ManageAccountVM
 import kotlin.String
 import kotlin.Unit
@@ -29,6 +31,14 @@ class ManageAccountActivity :
     }
     binding.linearDeleteacc.setOnClickListener {
       val destIntent = DeleteAccConfirmationActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.imageHome.setOnClickListener{
+      val destIntent = MainPageActivity.getIntent(this,null)
+      startActivity(destIntent)
+    }
+    binding.imageUser.setOnClickListener{
+      val destIntent = EditProfileActivity.getIntent(this,null)
       startActivity(destIntent)
     }
     binding.btnArrowleft.setOnClickListener {

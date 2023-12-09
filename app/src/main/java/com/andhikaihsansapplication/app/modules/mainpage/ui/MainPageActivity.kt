@@ -102,6 +102,11 @@ class MainPageActivity : BaseActivity<ActivityMainPageBinding>(R.layout.activity
       val destIntent = EditProfileActivity.getIntent(this, null)
       startActivityForResult(destIntent, REQUEST_CODE_EDIT_PROFILE_ACTIVITY)
     }
+    binding.btnEmergencyalert.setOnClickListener{
+      val destIntent = SpesialisJantungActivity.getIntent(this, null)
+      destIntent.putExtra("CURRENT_KATEGORI", "Find Hospital")
+      startActivityForResult(destIntent, REQUEST_CODE_EDIT_PROFILE_ACTIVITY)
+    }
   }
 
   fun onClickRecyclerMainPage(
