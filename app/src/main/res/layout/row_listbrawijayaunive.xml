@@ -11,8 +11,8 @@
             android:layout_height="@dimen/_120pxh"
             android:layout_width="@dimen/_150pxh"
             android:scaleType="fitXY" cornerRadius="@{@dimen/_10pxh}"
-            imageRes="@{@drawable/img_image1}"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_image1"/>
+            android:src="@drawable/thumbnail_rs"
+            tools:ignore="ContentDescription" tools:src="@drawable/thumbnail_rs"/>
         <LinearLayout android:gravity="start"
             android:id="@+id/linearColumnbrawijayaunive"
             android:layout_height="wrap_content"

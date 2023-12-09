@@ -9,11 +9,14 @@ import androidx.activity.viewModels
 import com.andhikaihsansapplication.app.R
 import com.andhikaihsansapplication.app.appcomponents.base.BaseActivity
 import com.andhikaihsansapplication.app.databinding.ActivitySplashScreenBinding
+import com.andhikaihsansapplication.app.modules.mainpage.ui.MainPageActivity
 import com.andhikaihsansapplication.app.modules.onboardingone.ui.OnBoardingOneActivity
 import com.andhikaihsansapplication.app.modules.spesialisjantung.ui.SpesialisJantungActivity
 import com.andhikaihsansapplication.app.modules.splashscreen.`data`.viewmodel.SplashScreenVM
 import com.andhikaihsansapplication.app.modules.swipekanan.ui.SwipeKananActivity
 import com.andhikaihsansapplication.app.modules.swipekanantwo.ui.SwipeKananTwoActivity
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 import kotlin.String
 import kotlin.Unit
 
@@ -30,9 +33,20 @@ class SplashScreenActivity :
 
     override fun setUpClicks(): Unit {
       binding.btnNext.setOnClickListener {
-        val destIntent = OnBoardingOneActivity.getIntent(this, null)
-        startActivity(destIntent)
-        this.overridePendingTransition(R.anim.right_to_left ,0 )
+        val user = Firebase.auth.currentUser
+
+        if (user != null) {
+          val destIntent = MainPageActivity.getIntent(this, null)
+          startActivity(destIntent)
+          this.overridePendingTransition(R.anim.right_to_left ,0 )
+          // User is signed in
+        } else {
+          val destIntent = OnBoardingOneActivity.getIntent(this, null)
+          startActivity(destIntent)
+          this.overridePendingTransition(R.anim.right_to_left ,0 )
+          // No user is signed in
+        }
+
       }
 
       binding.btnEmergencyalert.setOnClickListener{

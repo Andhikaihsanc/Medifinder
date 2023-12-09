@@ -57,7 +57,6 @@
                     android:layout_marginTop="@dimen/_3pxh"
                     android:layout_weight="0.85"
                     android:layout_width="0dp"
-                    android:singleLine="true"
                     android:text="Makanan"
                     style="@style/txtJostromanbold26" tools:text="makanan" />
             </LinearLayout>

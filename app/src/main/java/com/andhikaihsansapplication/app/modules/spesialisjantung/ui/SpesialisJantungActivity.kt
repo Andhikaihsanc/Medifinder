@@ -51,7 +51,7 @@ class SpesialisJantungActivity :
     var header: String = ""
     header = when(kategori){
       "anak" -> "Spesialis Anak"
-      "bedah" -> "Spesialis Bedah Umum"
+      "bedah" -> "Spesialis Bedah"
       "gigi" -> "Poli Gigi"
       "jantung" -> "Spesialis Jantung"
       "jiwa" -> "Poli Jiwa"
