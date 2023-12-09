@@ -251,23 +251,29 @@
                         android:text="@{registerVM.registerModel.txtPassword}"
                         tools:text="@string/lbl_password" />
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:id="@+id/linearColumnlineFive"
                         style="@style/groupStylered_700cornerRadius"
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        app:passwordToggleEnabled="true"
-                        app:passwordToggleTint="@color/white">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
                         <EditText
                             android:id="@+id/lineLineFive"
-                            style="@style/groupStylered_700cornerRadius"
-                            android:layout_height="wrap_content"
                             android:layout_width="@dimen/_300pxh"
-                            android:inputType="textPassword"
-                            android:layout_marginBottom="@dimen/_10pxv"
-                            android:layout_marginStart="@dimen/_9pxh"/>
-                    </com.google.android.material.textfield.TextInputLayout>
+                            android:layout_height="@dimen/_40pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_9pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_2pxv"
+                            android:paddingRight="5dp"
+                            android:longClickable="false"
+                            android:backgroundTint="@color/white"
+                            android:drawableRight="@drawable/baseline_visibility_off_24"
+                            android:inputType="textPassword"/>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -291,23 +297,29 @@
                         android:text="@{registerVM.registerModel.txtConfirmPasswor}"
                         tools:text="@string/msg_confirm_passwor" />
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:id="@+id/linearColumnlineSix"
                         style="@style/groupStylered_700cornerRadius"
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        app:passwordToggleEnabled="true"
-                        app:passwordToggleTint="@color/white">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
                         <EditText
                             android:id="@+id/lineLineSix"
-                            style="@style/groupStylered_700cornerRadius"
-                            android:layout_height="wrap_content"
                             android:layout_width="@dimen/_300pxh"
-                            android:inputType="textPassword"
-                            android:layout_marginBottom="@dimen/_10pxv"
-                            android:layout_marginStart="@dimen/_9pxh"/>
-                    </com.google.android.material.textfield.TextInputLayout>
+                            android:layout_height="@dimen/_40pxv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_9pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_marginEnd="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_2pxv"
+                            android:paddingRight="5dp"
+                            android:longClickable="false"
+                            android:backgroundTint="@color/white"
+                            android:drawableRight="@drawable/baseline_visibility_off_24"
+                            android:inputType="textPassword"/>
+                    </LinearLayout>
                 </LinearLayout>
                 
                 <ProgressBar

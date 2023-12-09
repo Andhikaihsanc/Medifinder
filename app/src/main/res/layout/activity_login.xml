@@ -48,19 +48,20 @@
                 android:text="@{loginVM.loginModel.txtUsername}"
                 style="@style/txtJostromanmedium14" tools:text="@string/lbl_username"/>
             <LinearLayout
-                android:gravity="center_horizontal"
                 android:id="@+id/linearColumnlineone"
+                style="@style/groupStylered_700cornerRadius"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_4pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical" style="@style/groupStylered_700cornerRadius">
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/lineLineOne"
                     android:layout_width="@dimen/_300pxh"
                     android:layout_height="@dimen/_40pxv"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginStart="@dimen/_9pxh"
                     android:layout_marginTop="@dimen/_2pxv"
                     android:layout_marginEnd="@dimen/_9pxh"
                     android:layout_marginBottom="@dimen/_2pxv"
@@ -85,23 +86,29 @@
                 android:singleLine="true"
                 android:text="@{loginVM.loginModel.txtPassword}"
                 style="@style/txtJostromanmedium14" tools:text="@string/lbl_password"/>
-            <com.google.android.material.textfield.TextInputLayout
+            <LinearLayout
                 android:id="@+id/linearColumnlinetwo"
                 style="@style/groupStylered_700cornerRadius"
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/white">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
                 <EditText
                     android:id="@+id/lineLineTwo"
-                    style="@style/groupStylered_700cornerRadius"
-                    android:layout_height="wrap_content"
                     android:layout_width="@dimen/_300pxh"
-                    android:inputType="textPassword"
-                    android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_marginStart="@dimen/_9pxh"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginEnd="@dimen/_9pxh"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:paddingRight="5dp"
+                    android:longClickable="false"
+                    android:backgroundTint="@color/white"
+                    android:drawableRight="@drawable/baseline_visibility_off_24"
+                    android:inputType="textPassword"/>
+            </LinearLayout>
 
         </LinearLayout>
 

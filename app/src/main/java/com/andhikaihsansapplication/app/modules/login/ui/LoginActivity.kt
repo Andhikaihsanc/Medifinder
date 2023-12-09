@@ -5,7 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
@@ -46,9 +48,26 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.loginVM = viewModel
+
+    val Password = findViewById<EditText>(R.id.lineLineTwo)
+    Password.setOnTouchListener { v, event ->
+      val right = 2 // Index of the right drawable
+      if (event.action == MotionEvent.ACTION_UP) {
+        if (event.rawX >= (Password.right - Password.compoundDrawables[right].bounds.width())) {
+          val isPasswordVisible = Password.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+          Password.inputType = if (isPasswordVisible) InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD else InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+          val drawableId = if (isPasswordVisible) R.drawable.baseline_visibility_off_24 else R.drawable.baseline_visibility_24
+          Password.setCompoundDrawablesWithIntrinsicBounds(null, null, resources.getDrawable(drawableId), null)
+          Password.setSelection(Password.length())
+          return@setOnTouchListener true
+        }
+      }
+      false
+    }
   }
 
-  @RequiresApi(Build.VERSION_CODES.N)
+
+    @RequiresApi(Build.VERSION_CODES.N)
   override fun setUpClicks(): Unit {
     binding.txtResister.setOnClickListener {
       val destIntent = RegisterActivity.getIntent(this, null)
@@ -105,11 +124,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
       }
     }
 
-
     binding.txtForgottenYour.setOnClickListener{
       val destIntent = ForgotPasswordActivity.getIntent(this, null)
       startActivity(destIntent)
     }
+
   }
 
   companion object {
