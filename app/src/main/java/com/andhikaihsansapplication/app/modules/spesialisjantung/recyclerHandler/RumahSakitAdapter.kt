@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andhikaihsansapplication.app.R
 
 class RumahSakitAdapter(
-    private val rumahSakitList: List<RumahSakit>,
+    private val rumahSakitList: Set<RumahSakit>,
     private val clickListener: RumahSakitClickListener
 ) : RecyclerView.Adapter<RumahSakitAdapter.RumahSakitViewHolder>() {
 
@@ -19,7 +19,7 @@ class RumahSakitAdapter(
     }
 
     override fun onBindViewHolder(holder: RumahSakitViewHolder, position: Int) {
-        val currentItem = rumahSakitList[position]
+        val currentItem = rumahSakitList.toList()[position]
         holder.textNamaRumahSakit.text = currentItem.nama
         holder.textAlamatRumahSakit.text = currentItem.alamat
         holder.textTeleponRumahSakit.text = currentItem.telepon

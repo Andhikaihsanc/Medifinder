@@ -32,6 +32,8 @@ import kotlinx.coroutines.withContext
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
+import androidx.appcompat.widget.SearchView
+import com.google.firebase.database.DatabaseReference
 
 class SpesialisJantungActivity :
     BaseActivity<ActivitySpesialisJantungBinding>(R.layout.activity_spesialis_jantung), RumahSakitClickListener {
@@ -83,10 +85,6 @@ class SpesialisJantungActivity :
       }
     }
 
-    // galeri candra
-    // rs ub
-    // rsi unisma
-
     if(header == "Nearest Hospital"){
       val rumahSakitListNearby = mutableListOf<RumahSakit>() // Buat list baru
       val nearbyRS1 = RumahSakit("RSIA Galeri Candra","Jl. Andong No.3, Jatimulyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141", "0341-478571")
@@ -96,37 +94,57 @@ class SpesialisJantungActivity :
       rumahSakitListNearby.add(nearbyRS2)
       rumahSakitListNearby.add(nearbyRS3)
       viewModelRS.tambahRumahSakitList(rumahSakitListNearby)
+
     } else {
-      // Tambahkan data baru ke dalam LiveData
-      servicesRef.child(kategori).addListenerForSingleValueEvent(object : ValueEventListener {
-        override fun onDataChange(snapshot: DataSnapshot) {
-          val rumahSakitList = mutableListOf<RumahSakit>() // Buat list baru
 
-          // Menggunakan Coroutine untuk mengumpulkan data dari snapshot
-          CoroutineScope(Dispatchers.IO).launch{
-            for (rsSnapshot in snapshot.children) {
-              rsRef.child(rsSnapshot.key.toString()).addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshotRS: DataSnapshot) {
-                  val snapshotValue = snapshotRS.getValue() // Mengambil nilai dari snapshot
-                  val map: Map<String, Any>? = snapshotValue as? Map<String, Any>
+      showingListRs(servicesRef, rsRef, kategori, viewModelRS)
 
-                  var namaRS = map?.get("nama_rs").toString()
-                  var alamatRS = map?.get("address").toString()
-                  var noRS = map?.get("er_contact").toString()
+      binding.searchViewButtonCustomT.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        override fun onQueryTextSubmit(query: String?): Boolean {
+          servicesRef.child(kategori).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+              val rumahSakitList = mutableSetOf<RumahSakit>() // Buat list baru
 
-                  val rumahSakit = RumahSakit(namaRS, alamatRS, noRS)
-                  rumahSakitList.add(rumahSakit) // Tambahkan ke list lokal
+              // Menggunakan Coroutine untuk mengumpulkan data dari snapshot
+              CoroutineScope(Dispatchers.IO).launch{
+                for (rsSnapshot in snapshot.children) {
+                  if(!rsSnapshot.key.toString().uppercase().contains(query.toString().uppercase())){
+                    continue
+                  }
+                  rsRef.child(rsSnapshot.key.toString()).addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(snapshotRS: DataSnapshot) {
+                      val snapshotValue = snapshotRS.getValue() // Mengambil nilai dari snapshot
+                      val map: Map<String, Any>? = snapshotValue as? Map<String, Any>
+
+                      var namaRS = map?.get("nama_rs").toString()
+                      var alamatRS = map?.get("address").toString()
+                      var noRS = map?.get("er_contact").toString()
+
+                      val rumahSakit = RumahSakit(namaRS, alamatRS, noRS)
+                      rumahSakitList.add(rumahSakit) // Tambahkan ke list lokal
+                    }
+                    override fun onCancelled(error: DatabaseError) {}
+                  })
                 }
-                override fun onCancelled(error: DatabaseError) {}
-              })
+
+                delay(500) // Tambahkan delay jika dibutuhkan untuk menunggu pengambilan data selesai
+                withContext(Dispatchers.Main) {
+                  viewModelRS.tambahRumahSakitList(rumahSakitList.toList()) // Tambahkan semua data ke dalam LiveData
+                }
+              }
             }
-            delay(1000) // Tambahkan delay jika dibutuhkan untuk menunggu pengambilan data selesai
-            withContext(Dispatchers.Main) {
-              viewModelRS.tambahRumahSakitList(rumahSakitList) // Tambahkan semua data ke dalam LiveData
-            }
-          }
+            override fun onCancelled(error: DatabaseError) {}
+          })
+          return false
         }
-        override fun onCancelled(error: DatabaseError) {}
+
+        override fun onQueryTextChange(newText: String?): Boolean {
+          if(newText == ""){
+            showingListRs(servicesRef, rsRef, kategori, viewModelRS)
+          }
+          return false
+        }
+
       })
     }
   }
@@ -180,4 +198,39 @@ class SpesialisJantungActivity :
       return destIntent
     }
   }
+}
+
+fun showingListRs(servicesRef: DatabaseReference, rsRef: DatabaseReference, kategori: String, viewModelRS: RumahSakitViewModel){
+// Tambahkan data baru ke dalam LiveData
+  servicesRef.child(kategori).addListenerForSingleValueEvent(object : ValueEventListener {
+    override fun onDataChange(snapshot: DataSnapshot) {
+      val rumahSakitList = mutableListOf<RumahSakit>() // Buat list baru
+
+      // Menggunakan Coroutine untuk mengumpulkan data dari snapshot
+      CoroutineScope(Dispatchers.IO).launch{
+        for (rsSnapshot in snapshot.children) {
+          rsRef.child(rsSnapshot.key.toString()).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshotRS: DataSnapshot) {
+              val snapshotValue = snapshotRS.getValue() // Mengambil nilai dari snapshot
+              val map: Map<String, Any>? = snapshotValue as? Map<String, Any>
+
+              var namaRS = map?.get("nama_rs").toString()
+              var alamatRS = map?.get("address").toString()
+              var noRS = map?.get("er_contact").toString()
+
+              val rumahSakit = RumahSakit(namaRS, alamatRS, noRS)
+              rumahSakitList.add(rumahSakit) // Tambahkan ke list lokal
+            }
+            override fun onCancelled(error: DatabaseError) {}
+          })
+        }
+
+        delay(1000) // Tambahkan delay jika dibutuhkan untuk menunggu pengambilan data selesai
+        withContext(Dispatchers.Main) {
+          viewModelRS.tambahRumahSakitList(rumahSakitList) // Tambahkan semua data ke dalam LiveData
+        }
+      }
+    }
+    override fun onCancelled(error: DatabaseError) {}
+  })
 }
