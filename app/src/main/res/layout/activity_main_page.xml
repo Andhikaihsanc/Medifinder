@@ -48,8 +48,7 @@
                                 android:layout_weight="0.85"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                android:text="@{mainPageVM.mainPageModel.txtWelcomeVerizc}"
-                                style="@style/txtJostromanbold26" tools:text="@string/msg_welcome_verizc"/>
+                                style="@style/txtJostromanbold26"/>
                             <ImageButton
                                 android:background="@drawable/rectangle_bg_red_900_radius_10"
                                 android:id="@+id/btnEmergencyalert"

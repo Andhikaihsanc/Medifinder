@@ -22,6 +22,15 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.andhikaihsansapplication.app.modules.register.data.User
+import com.andhikaihsansapplication.app.modules.spesialisjantung.recyclerHandler.RumahSakit
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity_register) {
   private val viewModel: RegisterVM by viewModels<RegisterVM>()
@@ -102,28 +111,57 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
       val confirmPassword = findViewById<EditText>((R.id.lineLineSix))
       val confirmpasswordInputValue = confirmPassword.text.toString()
 
-      progressBar = findViewById(R.id.progressBar)
-      progressBar.visibility = View.VISIBLE
+      val userNameList = mutableListOf<String>() // Buat list baru
 
-      // auth signup
-      auth.createUserWithEmailAndPassword(emailInputValue, passwordInputVaue)
-        .addOnCompleteListener(this) { task ->
-          if (task.isSuccessful) {
-            progressBar.visibility = View.GONE
+      CoroutineScope(Dispatchers.IO).launch{
+        usersRef.addListenerForSingleValueEvent(object :
+          ValueEventListener {
+          override fun onDataChange(snapshot: DataSnapshot) {
+            for (user in snapshot.children) {
+              var namaUser = user.key.toString()
+              userNameList.add(namaUser)
+            }
+          }
+          override fun onCancelled(error: DatabaseError) {}
+        })
 
-            // add user di realtime database
-            var userRef = usersRef.child(usernameInputValue)
-            var userData = User(emailInputValue, fullnameInputVaue, phonenumberInputValue, passwordInputVaue)
-            userRef.setValue(userData)
-
-            Toast.makeText(baseContext, "Account Created.", Toast.LENGTH_SHORT,).show()
-
-            val destIntent = LoginActivity.getIntent(this, null)
-            startActivity(destIntent)
+        delay(1000) // Tambahkan delay jika dibutuhkan untuk menunggu pengambilan data selesai
+        withContext(Dispatchers.Main) {
+          if(usernameInputValue == "" || emailInputValue == "" || fullnameInputVaue == "" || phonenumberInputValue == "" || passwordInputVaue == ""){
+            Toast.makeText(baseContext, "Data tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+            return@withContext
+          } else if (userNameList.contains(usernameInputValue)){
+            Toast.makeText(baseContext, "Username sudah dipakai!", Toast.LENGTH_SHORT).show()
+            return@withContext
+          } else if (passwordInputVaue !== confirmpasswordInputValue) {
+            Toast.makeText(baseContext, "Confirm password tidak sama dengan password!", Toast.LENGTH_SHORT).show()
+            return@withContext
           } else {
-            Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT,).show()
+            progressBar = findViewById(R.id.progressBar)
+            progressBar.visibility = View.VISIBLE
+
+            // auth signup
+            auth.createUserWithEmailAndPassword(emailInputValue, passwordInputVaue)
+              .addOnCompleteListener(this@RegisterActivity) { task ->
+                if (task.isSuccessful) {
+                  progressBar.visibility = View.GONE
+
+                  // add user di realtime database
+                  var userRef = usersRef.child(usernameInputValue)
+                  var userData = User(emailInputValue, fullnameInputVaue, phonenumberInputValue, passwordInputVaue)
+                  userRef.setValue(userData)
+
+                  Toast.makeText(baseContext, "Account Created.", Toast.LENGTH_SHORT,).show()
+
+                  val destIntent = LoginActivity.getIntent(this@RegisterActivity, null)
+                  startActivity(destIntent)
+                } else {
+                  Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT,).show()
+                }
+              }
           }
         }
+      }
     }
 
     binding.txtLogin.setOnClickListener {
